@@ -32,3 +32,18 @@ The sheets carry identity, hair, body and outfit only. Lighting for every shot c
 - All faces are AI-generated.
 - Images were made with Gemini 3 Pro Image through treg.
 - The plans and prompts are in the claude.ai Project "aigc" (`treg-ugc-*.md`).
+
+## Reference crops (`refs/`) — use these in prompts, never the sheets
+One person per file: face front on the left, full body front on the right. Pass these to keyframe and video calls, in a fixed order, and tag each with its role.
+
+| File | Role | Unique anchor |
+|---|---|---|
+| `refs/leader.jpg` | LEADER | the only black blunt bob + fringe, the only kimono |
+| `refs/hero.jpg` | HERO | the only platinum blonde, the only one with the magazine |
+| `refs/feather.jpg` | FEATHER | the only lavender feather dress |
+| `refs/slicked.jpg` | SLICKED | the only slicked-back bun, white midi + knit |
+| `refs/silverman.jpg` | SILVERMAN | the only man, silver hair |
+
+The 8-panel sheets in `sheets/` are the source of truth for review, but a video model reads a grid as eight people, so they must not go into a prompt.
+
+Keyframe prompts live in `prompts/`.
