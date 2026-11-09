@@ -1,0 +1,56 @@
+{
+  "project": "treg UGC promo",
+  "locked": "2026-11-09",
+  "note": "Character sheets carry identity, hair, body and outfit only. Lighting comes from the locked blocks in claude/treg-ugc-hook-shot-plan.md.",
+  "assets": [
+    {
+      "path": "sheets/leader_bob_kimono.jpg",
+      "role": "leader",
+      "who": "Bob: black blunt bob with fringe",
+      "outfit": "off-white pinstripe yukata, charcoal obi, white tabi, wooden zori"
+    },
+    {
+      "path": "sheets/hero.jpg",
+      "role": "hero",
+      "who": "platinum blonde, freckles",
+      "outfit": "black scoop tank, white pleated barrel trousers, black Mary Janes"
+    },
+    {
+      "path": "sheets/bg_feather_model.jpg",
+      "role": "background",
+      "who": "very slim Japanese runway model, long wavy black hair",
+      "outfit": "lilac ostrich-feather column dress, lilac flats"
+    },
+    {
+      "path": "sheets/bg_slicked.jpg",
+      "role": "background",
+      "who": "slicked-back brown hair",
+      "outfit": "white square-neck drop-waist midi, oatmeal knit tied over shoulders, black flats"
+    },
+    {
+      "path": "sheets/bg_silver_man.jpg",
+      "role": "background",
+      "who": "Japanese male model, shoulder-length silver hair",
+      "outfit": "white tee only, beige pleated chinos, black webbing belt, black slides"
+    },
+    {
+      "path": "plates/p1_master.png",
+      "role": "set",
+      "who": "street crosswalk master plate, 9:16",
+      "outfit": null
+    },
+    {
+      "path": "plates/p2_unused.png",
+      "role": "set",
+      "who": "street plate p2, sofa on the crossing (not used)",
+      "outfit": null
+    },
+    {
+      "path": "plates/p3_to_reroll.png",
+      "role": "set",
+      "who": "street plate p3, desk medium (to be re-rolled to match p1)",
+      "outfit": null
+    }
+  ],
+  "resolution": "full size: sheets 2752x1536, plates 1536x2752"
+}
