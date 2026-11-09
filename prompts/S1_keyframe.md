@@ -2,11 +2,11 @@
 
 Use with Gemini 3 Pro Image on reAPI, 9:16, 2K, `image_urls` in this order:
 
-1. `refs/leader.jpg`  — LEADER
-2. `refs/hero.jpg` — HERO
-3. `refs/feather.jpg` — FEATHER
-4. `refs/slicked.jpg` — SLICKED
-5. `refs/silverman.jpg` — SILVERMAN
+1. `cast/leader.jpg`  — LEADER
+2. `cast/hero.jpg` — HERO
+3. `cast/feather.jpg` — FEATHER
+4. `cast/slicked.jpg` — SLICKED
+5. `cast/silverman.jpg` — SILVERMAN
 6. `plates/p1_master.png` — the street
 
 Base URL: `https://raw.githubusercontent.com/cicadaaa/ugc-assets/main/`
@@ -37,8 +37,8 @@ Natural skin with visible pores, slight asymmetry, no airbrushing. No text anywh
 Remove the jump: SILVERMAN already seated on the sofa, laughing. If it drifts again, generate LEADER and HERO only, with the three background people as a soft, blurred group far behind.
 
 ## Gate 1 check before any video
-- LEADER face = refs/leader.jpg, bob + fringe, kimono on her and only her
-- HERO face = refs/hero.jpg, platinum, magazine in her hands
+- LEADER face = cast/leader.jpg, bob + fringe, kimono on her and only her
+- HERO face = cast/hero.jpg, platinum, magazine in her hands
 - Background three: right outfit on the right body, no extra people
 - "3X CHEAPER" spelled correctly
 - Light: even, neutral, no sun
