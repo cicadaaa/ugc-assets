@@ -1,4 +1,4 @@
-# treg UGC — locked asset library
+# UGC — locked asset library
 
 These are the locked Stage 2 assets for the treg AIGC promo, a UGC-style ad claiming "3x cheaper than Higgsfield". They were locked on Nov 9, 2026.
 
