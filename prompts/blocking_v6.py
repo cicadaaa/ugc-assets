@@ -17,13 +17,16 @@ ax.add_patch(Rectangle((-2, 3), 10, 1.2, color="#a89f91"))           # building
 for i in range(5):
     ax.add_patch(Rectangle((-1.7 + i * 2.0, 3.0), 1.3, 0.3, color="#3b3a36"))
 ax.plot([-2, 8], [0, 0], color="#888", lw=3)
-for i in range(13):                                                   # zebra stripes, run across the road
-    ax.add_patch(Rectangle((-1.2 + i * 0.6, -4.5), 0.32, 4.35, color="#efefef", alpha=.85, zorder=1))
+# zebra crossing: a 6 m wide band running straight out from the curb across the road
+# (perpendicular to the sidewalk); stripes lie parallel to the curb
+ax.add_patch(Rectangle((-0.3, -4.6), 6.3, 4.6, fill=False, ec="#cfcfcf", ls=":", lw=1, zorder=1))
+for i in range(8):
+    ax.add_patch(Rectangle((-0.3, -0.55 - i * 0.6), 6.3, 0.32, color="#efefef", alpha=.8, zorder=1))
 ax.text(7.3, 3.7, "BUILDING (shop windows)", ha="right", va="center", fontsize=9)
 ax.text(7.3, 2.5, "SIDEWALK", ha="right", fontsize=9, color="#555")
 ax.text(7.3, -0.35, "CURB", ha="right", fontsize=8, color="#ddd")
 ax.text(7.3, -4.3, "ROAD", ha="right", fontsize=9, color="#ddd")
-ax.text(-1.2, -4.75, "zebra crossing", fontsize=8, color="#333")
+ax.text(-1.9, -2.3, "zebra crossing\n(runs straight\nacross the road,\nperpendicular to\nthe sidewalk)", fontsize=7.5, color="#eee")
 
 def rot_rect(cx, cy, w, h, ang, **kw):
     a = math.radians(ang)
@@ -42,17 +45,17 @@ ax.text(4.25, -0.85, "DESK", ha="center", va="center", fontsize=7.5, rotation=-3
 rot_rect(3.65, -0.55, 0.42, 0.3, -30, fc="#c9cdd2", ec="#333", lw=1)       # laptop on the near end
 ax.text(3.75, -0.05, "laptop", fontsize=6.5)
 ax.add_patch(Circle((4.85, -1.2), 0.12, fc="#111", zorder=3))
-ax.add_patch(Circle((5.7, -0.7), 0.28, fc="#b07a46", ec="#5a3b1e", zorder=2))
-ax.text(6.05, -0.7, "chair", fontsize=6.5, va="center", color="white")
-ax.annotate("", xy=(1.72, -0.6), xytext=(3.38, -0.6), arrowprops=dict(arrowstyle="<->", color="#eee", lw=1))
-ax.text(2.25, -0.45, "≈2 m", fontsize=8, color="#eee")
+ax.add_patch(Circle((5.45, -0.55), 0.28, fc="#b07a46", ec="#5a3b1e", zorder=2))
+ax.text(5.15, -0.15, "chair", fontsize=6.5, va="center", color="#333")
+ax.annotate("", xy=(1.72, -0.4), xytext=(3.38, -0.4), arrowprops=dict(arrowstyle="<->", color="#333", lw=1))
+ax.text(2.3, -0.32, "≈2 m", fontsize=8, color="#333")
 
 def person(x, y, label, col, r=0.24, txt="white"):
     ax.add_patch(Circle((x, y), r, fc=col, ec="black", lw=0.8, zorder=6))
     ax.text(x, y, label, ha="center", va="center", fontsize=7, color=txt, zorder=7, weight="bold")
 
 ax.add_patch(Circle((1.1, -1.7), 1.75, fill=False, ls="--", ec="#b9aef0", lw=1.2, zorder=3))
-ax.text(2.4, -2.3, "crew zone: hop around\nthe sofa, stay in the ring", fontsize=7.5, color="#e9e3ff")
+ax.text(2.9, -3.3, "crew zone: hop around\nthe sofa, stay in the ring", fontsize=7.5, color="#e9e3ff")
 person(1.35, -2.0, "FE", "#a58fd6")
 person(1.95, -2.75, "SM", "#9aa3ad")
 person(0.25, -1.4, "SL", "#c7b9a6", txt="black")
