@@ -1,7 +1,7 @@
 {
   "project": "treg UGC promo",
   "locked": "2026-11-10",
-  "note": "Character sheets carry identity, hair, body and outfit only. Lighting comes from the locked blocks in claude/treg-ugc-hook-shot-plan.md. Props and art added 2026-11-10: every prop now has its own reference sheet, same as the cast.",
+  "note": "Character crops carry identity, hair, body and outfit only. Prop crops carry shape, material and colour only. Lighting always comes from the locked blocks in claude/treg-ugc-hook-shot-plan.md. Pass single-view crops, never the multi-panel sheets - multi-panel references caused blending.",
   "assets": [
     {
       "path": "sheets/leader_bob_kimono.jpg",
@@ -52,55 +52,6 @@
       "outfit": null
     },
     {
-      "path": "props/sofa.png",
-      "role": "prop",
-      "who": "Cream bouclé channel-tufted sofa, brushed-brass legs",
-      "outfit": null,
-      "note": "On the crossing, all shots"
-    },
-    {
-      "path": "props/travertine_table.png",
-      "role": "prop",
-      "who": "Round travertine pedestal coffee table",
-      "outfit": null,
-      "note": "On the crossing, all shots"
-    },
-    {
-      "path": "props/oak_desk.png",
-      "role": "prop",
-      "who": "Light oak desk on black A-frame trestle legs",
-      "outfit": null,
-      "note": "At the curb, S3"
-    },
-    {
-      "path": "props/dome_lamp.png",
-      "role": "prop",
-      "who": "Black dome table lamp, shown off and on (2700K)",
-      "outfit": null,
-      "note": "On the desk, all shots. Stem taller than plate p1 - re-roll if exact match needed"
-    },
-    {
-      "path": "props/tan_chair.png",
-      "role": "prop",
-      "who": "Tan leather desk chair, black swivel base",
-      "outfit": null,
-      "note": "At the desk, S3"
-    },
-    {
-      "path": "props/macbook_silver.png",
-      "role": "prop",
-      "who": "Silver MacBook, blank lid, blank screen",
-      "outfit": null,
-      "note": "Lifted at 11.4s"
-    },
-    {
-      "path": "props/magazine_form.png",
-      "role": "prop",
-      "who": "Magazine form reference: open, held, three-quarter, closed, folded",
-      "outfit": null,
-      "note": "Hero's prop, S1 to S3. Artwork superseded by art/magazine_spread.png"
-    },
-    {
       "path": "art/magazine_spread.png",
       "role": "art",
       "who": "Magazine spread artwork: 3X (3x size) over CHEAPER, 'pay per call', treg logo alone on right page",
@@ -113,6 +64,62 @@
       "who": "treg lock-up, transparent PNG: two-square diagonal glyph + lowercase wordmark",
       "outfit": null,
       "note": "Rebuilt from treg.to markup. Glyph: 140.5/290 squares, rx 20/290, offset 149.5. Wordmark: DM Mono 600. Gap 9/28 of badge, type 15/28 of badge"
+    },
+    {
+      "path": "props/sofa.jpg",
+      "role": "prop",
+      "who": "Cream bouclé channel-tufted sofa, brushed-brass legs",
+      "outfit": null,
+      "note": "On the crossing, all shots | single-view crop (front + three-quarter), the form to pass as a reference",
+      "sheet": "props/sheets/sofa_6view.png"
+    },
+    {
+      "path": "props/travertine_table.jpg",
+      "role": "prop",
+      "who": "Round travertine pedestal coffee table",
+      "outfit": null,
+      "note": "On the crossing, all shots | single-view crop (front + three-quarter), the form to pass as a reference",
+      "sheet": "props/sheets/travertine_table_6view.png"
+    },
+    {
+      "path": "props/oak_desk.jpg",
+      "role": "prop",
+      "who": "Light oak desk on black A-frame trestle legs",
+      "outfit": null,
+      "note": "At the curb, S3 | single-view crop (front + three-quarter), the form to pass as a reference",
+      "sheet": "props/sheets/oak_desk_6view.png"
+    },
+    {
+      "path": "props/dome_lamp.jpg",
+      "role": "prop",
+      "who": "Black dome table lamp (off and on, 2700K)",
+      "outfit": null,
+      "note": "On the desk. Stem taller than plate p1 - re-roll if exact match needed | single-view crop (front + three-quarter), the form to pass as a reference",
+      "sheet": "props/sheets/dome_lamp_6view.png"
+    },
+    {
+      "path": "props/tan_chair.jpg",
+      "role": "prop",
+      "who": "Tan leather desk chair, black swivel base",
+      "outfit": null,
+      "note": "At the desk, S3 | single-view crop (front + three-quarter), the form to pass as a reference",
+      "sheet": "props/sheets/tan_chair_6view.png"
+    },
+    {
+      "path": "props/macbook_silver.jpg",
+      "role": "prop",
+      "who": "Silver MacBook, blank lid, blank screen",
+      "outfit": null,
+      "note": "Lifted at 11.4s. Lid stays blank; screen recording takes over on the cut | single-view crop (front + three-quarter), the form to pass as a reference",
+      "sheet": "props/sheets/macbook_silver_6view.png"
+    },
+    {
+      "path": "props/magazine_form.jpg",
+      "role": "prop",
+      "who": "Magazine form reference (shape and handling only)",
+      "outfit": null,
+      "note": "Hero's prop. Pages are BLANK in stills/video; artwork is tracked on in the edit | single-view crop (front + three-quarter), the form to pass as a reference",
+      "sheet": "props/sheets/magazine_form_6view.png"
     }
   ],
   "resolution": "full size: sheets 2752x1536, plates 1536x2752",
