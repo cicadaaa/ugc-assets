@@ -1,4 +1,4 @@
-# UGC — reference assets (v4.2, Nov 10, 2026)
+# UGC — reference assets (v5.0, Nov 10, 2026) — 16:9 landscape
 
 Only the files below exist. Every image call uses them through these public links:
 `https://raw.githubusercontent.com/cicadaaa/ugc-assets/main/<path>`
@@ -27,10 +27,9 @@ Only the files below exist. Every image call uses them through these public link
 - `shots/S1a.png … S5b.png` — one diagram per beat (top view + projected camera view); `shots/_all_shots.jpg` shows all nine.
 
 ## Plates (`plates/`)
-- `scene_empty.jpg` — the LOCATION reference: same street as P-C2 with every piece of furniture removed. Used in every call.
-- `P-C2.jpg` — the furnished version, kept for human review of the dressed set; the furniture crops in `props/` are cut from it.
+- `scene_empty.jpg` — the LOCATION reference, 16:9: the empty street with no furniture. Used in every call.
 
-## Props (`props/`) — appearance only, cut from P-C2
+## Props (`props/`) — appearance only
 - `sofa_table.jpg`, `desk_set.jpg`
 
 ## Edit-only artwork (`art/`) — composited in the edit, never in a generation call
@@ -39,4 +38,4 @@ Only the files below exist. Every image call uses them through these public link
 ## Scripts (`prompts/`)
 - `shotdiagrams.py`, `set_layout.py`, `blocking_v7.py` — redraw the blocking images.
 
-Everything older (character sheets, face boards, prop sheets, keyframes v1–v5, old plates, drafts, storyboards) was removed on Nov 10 so nothing can reference it by mistake. It is still in the git history if ever needed.
+Everything older (character sheets, face boards, prop sheets, all earlier keyframes, the furnished and portrait plates, drafts, storyboards) was removed on Nov 10 so nothing can reference it by mistake. It is still in the git history if ever needed.
