@@ -1,9 +1,9 @@
-# UGC — reference assets (v4.1, Nov 10, 2026)
+# UGC — reference assets (v4.2, Nov 10, 2026)
 
 Only the files below exist. Every image call uses them through these public links:
 `https://raw.githubusercontent.com/cicadaaa/ugc-assets/main/<path>`
 
-## Pass to every keyframe call, in this order (7 images)
+## Pass to every keyframe call, in this order (9 images)
 
 | # | File | Role | Unique anchor |
 |---|---|---|---|
@@ -12,8 +12,10 @@ Only the files below exist. Every image call uses them through these public link
 | 3 | `cast/feather.jpg` | FEATHER | the only lavender feather dress |
 | 4 | `cast/slicked.jpg` | SLICKED | the only slicked-back bun, white midi + knit |
 | 5 | `cast/silverman.jpg` | SILVERMAN | the only man, silver hair |
-| 6 | `plates/P-C2.jpg` (or the beat's camera mark) | empty set | fixes every piece of furniture |
-| 7 | `blocking/shots/<beat>.png` | blocking diagram | where each person and prop lands in frame |
+| 6 | `plates/scene_empty.jpg` | LOCATION | the empty street, no furniture — never changes |
+| 7 | `props/sofa_table.jpg` | furniture look | sofa + travertine table (appearance only) |
+| 8 | `props/desk_set.jpg` | furniture look | desk + laptop + lamp + chair (appearance only) |
+| 9 | `blocking/shots/<beat>.png` | blocking diagram | where each person AND each piece of furniture goes |
 
 **Cast files:** one JPG per person. Left: the person's ONE front-view face. Right: their outfit front and back, with the head and all hair removed, so the only face in the file is the one on the left.
 
@@ -25,7 +27,11 @@ Only the files below exist. Every image call uses them through these public link
 - `shots/S1a.png … S5b.png` — one diagram per beat (top view + projected camera view); `shots/_all_shots.jpg` shows all nine.
 
 ## Plates (`plates/`)
-- `P-C2.jpg` — locked empty set from camera mark C2. P-C1, P-C3, P-C4 are made from it when needed.
+- `scene_empty.jpg` — the LOCATION reference: same street as P-C2 with every piece of furniture removed. Used in every call.
+- `P-C2.jpg` — the furnished version, kept for human review of the dressed set; the furniture crops in `props/` are cut from it.
+
+## Props (`props/`) — appearance only, cut from P-C2
+- `sofa_table.jpg`, `desk_set.jpg`
 
 ## Edit-only artwork (`art/`) — composited in the edit, never in a generation call
 - `magazine_spread.png`, `treg_logo.png`
