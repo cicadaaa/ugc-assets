@@ -1,4 +1,4 @@
-# treg AIGC promo: hook shot plan v6.1, 0:00–0:11.3 (Nov 10, 2026)
+# treg AIGC promo: hook shot plan v6.1, 0:00–0:12.2 (Nov 10, 2026)
 
 **v6: the hook is cut to the lines.** Every second has someone talking, except the silent open (S1, 0.5 s) and the push into the screen at the end of S4 (0.3 s at most). Gaps between lines are 0.2 s at most. The walk from the sofa to the desk is gone: S1 cuts straight to the pair already at the desk (S2). The hook is now about 11.3 s instead of 13 s.
 
@@ -16,13 +16,13 @@
 |---|---|---|---|---|---|
 | S1 | 0:00.0–0:00.5 | 0.5 s | nobody | (silent open: sofa, they rise) | — |
 | S2 | 0:00.5–0:02.4 | 1.9 s | LEADER | "Still paying Higgsfield for this?" | `audio/vo_leader_still-paying.mp3` (1.70 s) |
-| S3a | 0:02.4–0:04.8 | 2.4 s | HERO | "We made Higgsfield three x cheaper." | `audio/vo_hero_3x-cheaper.mp3` (2.27 s) · alt `vo_hero_5x-cheaper.mp3` (2.69 s) |
+| S3a | 0:02.4–0:04.8 | 2.4 s | HERO | "We made Higgsfield three x cheaper." | `audio/vo_hero_3x-cheaper.mp3` (2.27 s) |
 | S3b | 0:04.8–0:09.8 | 5.0 s | HERO | "I cost nine forty-five on Higgsfield… and now a dollar eighty on treg." | `audio/vo_hero_price.mp3` (4.81 s) |
-| S4 | 0:09.8–0:11.3 | 1.5 s + push | LEADER | "Told you, it's pay per call." then the push into the screen | `audio/vo_leader_told-you_a.mp3` (1.65 s) · alt `_b` with a full stop (2.35 s) |
+| S4 | 0:09.8–0:12.2 | 2.4 s | LEADER | "Told you. It's pay per call." then the push into the screen | `audio/vo_leader_told-you.mp3` (2.35 s) |
 
-S4's push into the screen overlaps the end of the line; at most 0.3 s after her last word. Total ≈ 11.3 s (11.7 s with the "five x" take).
+S4's push into the screen overlaps the end of the line; at most 0.3 s after her last word. Total ≈ 12.2 s. Seedance needs audio of at least 2 s, so S2 is fed `audio/sd_leader_still-paying_2.2s.mp3` (the same take with 0.5 s of silence after it).
 
-**Claim check:** $9.45 ÷ $1.80 = 5.25×. "Three x cheaper" undersells it; "five x cheaper" matches the prices. Pick one before the S3a video.
+**Claim:** chosen "three x cheaper" (the prices give 5.25×, so the claim is conservative).
 
 ## 1. References — exactly these 9 images, in this order, in every keyframe call
 
@@ -184,10 +184,10 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 - **Line:** HERO: "I cost [$HF] on Higgsfield… and now [$TREG] on treg." Magazine open in her hands; eyes slide to LEADER on "treg". LEADER watches her, proud.
 - **Move:** arc to LEADER's left, ending with LEADER's shoulder in the left foreground.
 
-### S4 · LEADER's last line, straight into the screen · 0:09.8–0:11.3 · LEADER speaks
+### S4 · LEADER's last line, straight into the screen · 0:09.8–0:12.2 · LEADER speaks
 - **First frame:** `keyframes/v10/S4.jpg` · **last frame:** `keyframes/v10/S5b.jpg` (Seedance first + last frame). `S5a.jpg` is the guide for the middle of the move.
 - **Start:** HERO left-centre, soft; LEADER right-centre, sharp, head turned over her LEFT shoulder to the lens, sly proud half-smile; desk with the blank lid; crew soft on the sofa.
-- **Line:** LEADER: "Told you, it's pay per call." She starts on the first frame.
+- **Line:** LEADER: "Told you. It's pay per call." She starts on the first frame.
 - **Action:** on "pay per call" she turns back to the desk and lifts the open laptop with both hands to chest height; the screen faces her (the sofa direction), the lid away.
 - **Move:** one continuous handheld move: hold on her face for "Told you", then on "pay per call" the camera swings round behind her left shoulder (back of her bob, obi bow centred, NO face from here on) and pushes past it until the plain glowing screen fills the frame. A little wobble, 1° tilt. Ends on the hand-off frame (S5b) at most 0.3 s after her last word.
 - **Hand-off:** the last frame is the match cut to the screen recording.
@@ -197,10 +197,10 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 | Clip | Beat | Frames | Generate | Use in edit | Audio |
 |---|---|---|---|---|---|
 | 1 | S1 | first S1a | 4 s | first 0.5 s | none |
-| 2 | S2 | first S2a | 4 s | 1.9 s | `vo_leader_still-paying.mp3` |
-| 3 | S3a | first S3a | 4 s | 2.4 s | `vo_hero_3x-cheaper.mp3` (or 5x) |
+| 2 | S2 | first S2a | 4 s | 1.9 s | `sd_leader_still-paying_2.2s.mp3` |
+| 3 | S3a | first S3a | 4 s | 2.4 s | `vo_hero_3x-cheaper.mp3` |
 | 4 | S3b | first S3b | 5 s | 5.0 s | `vo_hero_price.mp3` |
-| 5 | S4 | first S4, last S5b | 4 s | 1.5–1.9 s (sped up if the push runs long) | `vo_leader_told-you_a.mp3` |
+| 5 | S4 | first S4, last S5b | 4 s | 2.4 s (sped up if the push runs long) | `vo_leader_told-you.mp3` |
 
 Each spoken clip gets its line as audio input so the lips sync; the line starts on the clip's first frame. The final mix uses the clean voice files.
 
@@ -243,5 +243,4 @@ Both are rendered in code with the real fonts, so the type is exact and cannot b
 - Voice lines: under $0.01 each.
 
 ## 11. Still open
-- "Three x" or "five x" cheaper (the prices make it 5.25×).
-- Listen to and approve the five takes in `audio/`.
+- 480p pass 1 submitted Nov 10; review against Gate 2.
