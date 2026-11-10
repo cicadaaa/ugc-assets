@@ -150,11 +150,19 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 ## 6. Beats (16:9)
 
 ### S1 · Sofa, they rise · 0:00.0–0:00.5 · silent
-- **Keyframe:** `keyframes/v10/S1a.jpg` · previz `blocking/previz/S1a.jpg`
-- **Frame order, left to right:** SILVERMAN (armrest), HERO, LEADER (sofa end nearest the desk), SLICKED (table); FEATHER on the seat behind; desk just right of the sofa, chair empty.
-- **Action:** LEADER glances up at the lens with a half-smile and starts to rise; HERO, laughing, rises with her. The crew stays on the furniture.
-- **Move:** settle + tilt-up.
-- **Cut:** hard cut on LEADER's rise to S2.
+- **Length:** 0.5 s = 12 frames at 24 fps. The only job: show the street, the crew and LEADER, and start the rise that the cut to S2 finishes.
+- **First frame:** `keyframes/v10/S1a.jpg` · previz `blocking/previz/S1a.jpg`
+- **Camera:** plate camera (the angle of `scene_empty.jpg`): on the sidewalk side, lens at about 1.8 m, 23 mm, tilted down about 8°, wide: building, sofa, table and desk all in frame. 16:9.
+- **Frame, left to right:** SILVERMAN on the left armrest · HERO on the seat, closed magazine on her lap · FEATHER on the seat · SLICKED on the travertine table · LEADER at the sofa's right end, nearest the desk · desk with the blank laptop lid, lit lamp, empty chair at the right.
+- **Action, frame by frame:**
+  - 0.00–0.15 s: LEADER looks up at the lens, half-smile. HERO is mid-laugh. FEATHER's feathers ripple; SILVERMAN shifts on the armrest; SLICKED's knit sleeves swing in the breeze.
+  - 0.15–0.50 s: LEADER puts her hands on her knees and starts to stand, eyes still on the lens; HERO closes the magazine and pushes up with her. The crew stays on the furniture and turns its heads toward the two of them.
+- **Move:** settle + tilt-up. The frame lands on the group with a small bob and a 1° drift it corrects; as LEADER rises, the camera tilts up a beat late.
+- **Focus:** on LEADER; the crew slightly soft.
+- **Sound:** no line. Street room tone, light breeze; HERO's laugh may bleed under the cut (not a line).
+- **Cut:** on the action, as LEADER's knees straighten → hard cut to S2 (they're already at the desk; her line starts on S2's first frame).
+- **Video:** first frame S1a, no audio input, minimum length; keep only the first 12 frames.
+- **Gate:** LEADER's face matches `cast/leader.jpg`; nobody stands behind the sofa or at the desk; the laptop lid stays blank and toward the camera; the street is `scene_empty.jpg`.
 
 ### S2 · LEADER's line, push-in · 0:00.5–0:02.7 · LEADER speaks
 - **Keyframes:** first frame `keyframes/v10/S2a.jpg`; the push ends on `S2b.jpg`.
