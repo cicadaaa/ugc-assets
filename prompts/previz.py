@@ -6,14 +6,14 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 import shotdiagrams as sd
 
-PLATE = '/home/claude/treg-ugc-assets/plates/scene_front.jpg'
+PLATE = '/home/claude/treg-ugc-assets/plates/scene_empty.jpg'
 FONT = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 34)
 
 def mk(cx, cy, cz, yawdeg, pitch):
     y = math.radians(yawdeg)
     return dict(x=cx, y=cy, z=cz, look=(cx + math.cos(y), cy + math.sin(y)), pitch=pitch, roll=0)
 
-PLATE_CAM = mk(2.1, -6.5, 1.5, 90, -12)   # calibrated to scene_front.jpg: frontal, curb at 0.52H
+PLATE_CAM = mk(-2.981, -8.875, 1.796, 47.2, -7.75)   # fitted to scene_empty.jpg + Chia's couch/desk boxes
 
 COL = {'L': (30, 30, 30), 'H': (232, 210, 122), 'FE': (165, 143, 214), 'SM': (154, 163, 173), 'SL': (199, 185, 166)}
 FCOL = {'sofa': (239, 232, 218), 'table': (228, 217, 195), 'desk': (214, 185, 140), 'laptop': (201, 205, 210),
@@ -45,12 +45,12 @@ def draw_furniture(draw, cam, W, H):
     box(draw, cam, sd.SOFA_BACK['poly'], 0, 0.85, (216, 207, 189), W, H)
     cx, cy, r = sd.TABLE['circle']; box(draw, cam, circle_pts(cx, cy, r), 0, 0.42, FCOL['table'], W, H)
     box(draw, cam, sd.DESK['poly'], 0.68, 0.76, FCOL['desk'], W, H)          # desk top slab
-    for lx, ly in [(3.3, -0.55), (5.05, -1.55), (3.45, -0.05), (5.2, -1.0)]:  # legs
+    for lx, ly in [(1.1, -3.95), (2.1, -5.25), (1.75, -3.7), (1.45, -5.5)]:  # legs
         box(draw, cam, [(lx - 0.03, ly - 0.03), (lx + 0.03, ly - 0.03), (lx + 0.03, ly + 0.03), (lx - 0.03, ly + 0.03)], 0, 0.72, (90, 70, 40), W, H)
     box(draw, cam, sd.LAPTOP['poly'], 0.76, 0.78, FCOL['laptop'], W, H)       # base
     box(draw, cam, sd.SCREEN['poly'], 0.76, 0.98, FCOL['screen'], W, H)       # screen, facing the sofa
     cx, cy, r = sd.LAMP['circle']; box(draw, cam, circle_pts(cx, cy, 0.03), 0.76, 1.15, FCOL['lamp'], W, H); box(draw, cam, circle_pts(cx, cy, r), 1.12, 1.25, FCOL['lamp'], W, H)
-    cx, cy, r = sd.CHAIR['circle']; box(draw, cam, circle_pts(cx, cy, r), 0.42, 0.47, FCOL['chair'], W, H); box(draw, cam, circle_pts(cx + 0.2, cy - 0.1, 0.05), 0.45, 0.9, FCOL['chair'], W, H)
+    cx, cy, r = sd.CHAIR['circle']; box(draw, cam, circle_pts(cx, cy, r), 0.42, 0.47, FCOL['chair'], W, H); box(draw, cam, circle_pts(cx + 0.22, cy, 0.05), 0.45, 0.9, FCOL['chair'], W, H)
 
 def draw_person(draw, cam, p, W, H):
     hgt = sd.person_height(p)

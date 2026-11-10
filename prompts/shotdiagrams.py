@@ -23,12 +23,12 @@ def rot(cx, cy, w, h, ang):
 
 SOFA = dict(poly=[(0.72, -2.4), (1.68, -2.4), (1.68, -0.1), (0.72, -0.1)], h=0.45, fc="#efe8da", ec="#8a7f6a", label="sofa")
 SOFA_BACK = dict(poly=[(0.72, -2.4), (0.95, -2.4), (0.95, -0.1), (0.72, -0.1)], h=0.85, fc="#d8cfbd", ec="#8a7f6a", label="")
-TABLE = dict(circle=(1.2, -3.0, 0.36), h=0.42, fc="#e4d9c3", ec="#8a7f6a", label="table")
-DESK = dict(poly=rot(4.2, -0.8, 1.9, 0.75, -30), h=0.75, fc="#d6b98c", ec="#7a6240", label="desk")
-LAPTOP = dict(poly=rot(3.72, -0.6, 0.32, 0.44, 0), h=0.77, fc="#c9cdd2", ec="#333", label="")
-SCREEN = dict(poly=[(3.56, -0.82), (3.59, -0.82), (3.59, -0.38), (3.56, -0.38)], h=0.98, z0=0.76, fc="#9ecbff", ec="#1f5fbf", label="screen")
-LAMP = dict(circle=(4.85, -1.2, 0.14), h=1.25, fc="#111", ec="#111", label="lamp")
-CHAIR = dict(circle=(5.4, -0.75, 0.28), h=0.9, fc="#a8743f", ec="#5a3b1e", label="chair")
+TABLE = dict(circle=(2.25, -1.3, 0.36), h=0.42, fc="#e4d9c3", ec="#8a7f6a", label="table")
+DESK = dict(poly=rot(1.6, -4.6, 1.9, 0.75, 70), h=0.75, fc="#d6b98c", ec="#7a6240", label="desk")
+LAPTOP = dict(poly=rot(1.35, -3.95, 0.44, 0.32, 0), h=0.77, fc="#c9cdd2", ec="#333", label="")
+SCREEN = dict(poly=[(1.13, -3.82), (1.57, -3.82), (1.57, -3.79), (1.13, -3.79)], h=0.98, z0=0.76, fc="#9ecbff", ec="#1f5fbf", label="screen")
+LAMP = dict(circle=(1.85, -5.3, 0.14), h=1.25, fc="#111", ec="#111", label="lamp")
+CHAIR = dict(circle=(2.45, -4.7, 0.28), h=0.9, fc="#a8743f", ec="#5a3b1e", label="chair")
 FURN = [SOFA, SOFA_BACK, TABLE, DESK, LAPTOP, SCREEN, LAMP, CHAIR]
 
 # ---------- people ----------
@@ -74,26 +74,27 @@ def to_axes(uv):
 
 # ---------- drawing: top view ----------
 def draw_top(ax, people, cam, title):
-    ax.set_xlim(-1.0, 6.5); ax.set_ylim(-4.0, 3.2); ax.set_aspect("equal"); ax.axis("off")
-    ax.add_patch(Rectangle((-1, -4), 7.5, 4, color="#5f6368"))
-    ax.add_patch(Rectangle((-1, 0), 7.5, 2.4, color="#d9d4cc"))
-    ax.add_patch(Rectangle((-1, 2.4), 7.5, 0.8, color="#a89f91"))
+    ax.set_xlim(-2.0, 5.5); ax.set_ylim(-7.0, 3.2); ax.set_aspect("equal"); ax.axis("off")
+    ax.add_patch(Rectangle((-2, -7), 7.5, 7, color="#5f6368"))
+    ax.add_patch(Rectangle((-2, 0), 7.5, 2.4, color="#d9d4cc"))
+    ax.add_patch(Rectangle((-2, 2.4), 7.5, 0.8, color="#a89f91"))
     for i in range(4):
         ax.add_patch(Rectangle((-0.6 + i*1.8, 2.4), 1.2, 0.25, color="#3b3a36"))
-    ax.plot([-1, 6.5], [0, 0], color="#999", lw=3)
-    for i in range(7):
+    ax.plot([-2, 5.5], [0, 0], color="#999", lw=3)
+    for i in range(11):
         ax.add_patch(Rectangle((-0.3, -0.5 - i*0.6), 6.3, 0.32, color="#efefef", alpha=.85))
+    ax.add_patch(Rectangle((-2, -7), 7.5, 0.4, color="#d9d4cc"))  # near sidewalk edge (camera side)
     for fobj in FURN:
         if "poly" in fobj:
             ax.add_patch(Polygon(fobj["poly"], closed=True, fc=fobj["fc"], ec=fobj["ec"], lw=1.2, zorder=3))
         else:
             cx, cy, r = fobj["circle"]; ax.add_patch(Circle((cx, cy), r, fc=fobj["fc"], ec=fobj["ec"], lw=1.2, zorder=3))
     ax.text(1.2, -1.25, "SOFA", rotation=90, ha="center", va="center", fontsize=7, zorder=4)
-    ax.text(4.3, -0.9, "DESK", rotation=-30, ha="center", va="center", fontsize=7, zorder=4)
-    ax.annotate("", xy=(3.2, -0.6), xytext=(3.55, -0.6), arrowprops=dict(arrowstyle="-|>", color="#1f5fbf", lw=1.3), zorder=5)
-    ax.add_patch(Rectangle((1.75, -1.2), 1.6, 1.1, fill=False, ec="#d2452c", ls="--", lw=1.2, zorder=4))
-    ax.text(2.55, -1.35, "L+H LANE: only here, on the stripes,\nbetween sofa and desk (1.7 m)", ha="center", va="top", fontsize=5.8, color="#8a2414", zorder=5)
-    ax.add_patch(Rectangle((0.6, -3.5), 1.25, 3.5, fill=False, ec="#7a6aa8", ls=":", lw=1.1, zorder=4))
+    ax.text(1.6, -4.6, "DESK", rotation=70, ha="center", va="center", fontsize=7, zorder=4)
+    ax.annotate("", xy=(1.35, -3.3), xytext=(1.35, -3.78), arrowprops=dict(arrowstyle="-|>", color="#1f5fbf", lw=1.3), zorder=5)
+    ax.add_patch(Rectangle((0.6, -3.7), 1.3, 1.2, fill=False, ec="#d2452c", ls="--", lw=1.2, zorder=4))
+    ax.text(2.0, -3.1, "L+H LANE: on the stripes,\nbetween sofa end and desk", ha="left", va="top", fontsize=5.8, color="#8a2414", zorder=5)
+    ax.add_patch(Rectangle((0.6, -2.5), 2.1, 2.5, fill=False, ec="#7a6aa8", ls=":", lw=1.1, zorder=4))
     ax.text(1.2, 0.08, "crew: ON the sofa / armrest / table only", ha="center", va="bottom", fontsize=5.5, color="#5b4a8a", zorder=5)
     # camera frustum
     lx, ly = cam["look"]; yaw = math.degrees(math.atan2(ly - cam["y"], lx - cam["x"]))
@@ -110,8 +111,8 @@ def draw_top(ax, people, cam, title):
         ax.add_patch(FancyArrowPatch((p["x"] + r*math.cos(a), p["y"] + r*math.sin(a)),
                                      (p["x"] + (r+0.3)*math.cos(a), p["y"] + (r+0.3)*math.sin(a)),
                                      arrowstyle="-|>", mutation_scale=9, color=COL[p["k"]] if p["k"] != "L" else "#444", lw=1.2, zorder=6))
-    ax.text(-0.9, 3.0, title, fontsize=9, weight="bold", va="top")
-    ax.text(-0.9, -3.9, "top view · arrows = facing · red wedge = lens", fontsize=6.5, color="#333")
+    ax.text(-1.9, 3.0, title, fontsize=9, weight="bold", va="top")
+    ax.text(-1.9, -6.9, "top view · arrows = facing · red wedge = lens", fontsize=6.5, color="#333")
 
 # ---------- drawing: camera view ----------
 def draw_cam(ax, people, cam, title):
@@ -154,7 +155,7 @@ def draw_cam(ax, people, cam, title):
         s = poly_world([(-0.3, -0.5 - i*0.6), (6.0, -0.5 - i*0.6), (6.0, -0.18 - i*0.6), (-0.3, -0.18 - i*0.6)])
         if s:
             ax.add_patch(Polygon(s, closed=True, fc="#efefef", ec="none", alpha=.85, zorder=1))
-    lane = poly_world([(1.75, -1.2), (3.35, -1.2), (3.35, -0.1), (1.75, -0.1)])
+    lane = poly_world([(0.6, -3.7), (1.9, -3.7), (1.9, -2.5), (0.6, -2.5)])
     if lane:
         ax.add_patch(Polygon(lane, closed=True, fc="none", ec="#d2452c", ls="--", lw=1.0, zorder=2))
     # depth-sorted objects
@@ -229,57 +230,47 @@ def render(shot_id, title, beat_text, people, cam):
 
 # ---------- the beats ----------
 # crew home marks
-FE_home = P("FE", 1.35, -1.9, "kneel", 90, "on the seat")
-SM_home = P("SM", 1.4, -2.5, "sit", 90, "on the armrest")
-SL_home = P("SL", 1.2, -3.0, "sit", 90, "on the table")
+FE_home = P("FE", 1.35, -1.9, "kneel", 270, "on the seat")
+SM_home = P("SM", 1.4, -2.45, "sit", 270, "on the armrest")
+SL_home = P("SL", 2.25, -1.3, "sit", 270, "on the table")
 
 SHOTS = [
  ("S1a", "Sofa, camera arrives",
-  "S1a 0:00  All five at the sofa. LEADER sits at the curb end of the sofa, HERO right beside her on her right (the road side), magazine closed on her lap. "
-  "FEATHER bounces on the far seat; SILVERMAN sits on the road-end armrest and hops up and down on it; SLICKED sits on the travertine table facing the sofa. Nobody stands behind the sofa. "
-  "Camera C1 on the sidewalk, 2.6 m back from the curb, looking down at the sofa. LEADER glances up at the lens. Desk at the right frame edge.",
-  [P("L", 1.35, -0.55, "sit", 0, "sits, curb end"), P("H", 1.35, -1.25, "sit", 0, "sits beside L"), FE_home, SM_home, SL_home],
-  CAM(2.9, 2.6, (1.4, -1.4), z=1.5, pitch=-7, note="C1 · wide on the sofa")),
- ("S1b", "They stand and walk; camera backs up",
-  "S1b 0:00.8  LEADER and HERO are up and walking along the curb toward the desk, HERO glued to LEADER's right (road side), magazine now open over her face. They walk ON the white stripes, inside the 1.7 m lane between sofa and desk, never up onto the sidewalk. "
-  "Camera walks BACKWARD 2 m ahead of them along the sidewalk, step bob, slight tilt. Crew stays at the sofa, 1–2 m behind the pair, soft. LEADER looks into the lens.",
-  [P("L", 2.3, -0.4, "stand", 0, "walking, eyes on lens"), P("H", 2.3, -1.0, "stand", 0, "magazine over face"), FE_home, SM_home, SL_home],
-  CAM(3.7, 2.7, (2.3, -0.7), z=1.5, pitch=-5, roll=2, note="C1→C2 · walking backward")),
+  "S1a 0:00  All five at the sofa at the far (building) curb. LEADER sits on the sofa at the ROAD end (nearest the camera), HERO right beside her on her right, magazine closed on her lap. FEATHER kneels on the seat behind them; SILVERMAN sits on the far armrest; SLICKED sits on the travertine table beside the sofa. Nobody stands behind the sofa. The desk stands on the crossing nearer the camera, lower right. Camera C1 on the near sidewalk corner.",
+  [P("L", 1.35, -2.0, "sit", 270, "sits, road end"), P("H", 1.0, -2.0, "sit", 270, "sits beside L"), P("FE", 1.35, -1.2, "kneel", 270, "on the seat"), P("SM", 1.4, -0.3, "sit", 270, "on the armrest"), SL_home],
+  CAM(-2.98, -8.87, (1.2, -2.0), z=1.8, pitch=-7.7, note="C1 · wide on the sofa")),
+ ("S1b", "They stand and walk toward the camera; camera backs up",
+  "S1b 0:00.8  LEADER and HERO are up and walking along the stripes from the sofa toward the desk and the lens, HERO glued to LEADER's right, magazine open over her face. They stay inside the lane between the sofa's road end and the desk; the sofa is one step behind them, the desk one step ahead. Camera walks BACKWARD on the near sidewalk.",
+  [P("L", 1.35, -2.9, "stand", 270, "walking, eyes on lens"), P("H", 0.8, -2.85, "stand", 270, "magazine over face"), FE_home, SM_home, SL_home],
+  CAM(-3.2, -9.2, (1.2, -3.0), z=1.8, pitch=-7, roll=2, note="C1→C2 · walking backward")),
  ("S2a", "At the desk; LEADER starts her line",
-  "S2a 0:02  They stop at the desk's near end: HERO's right hip almost touches the desk corner, LEADER one step to her left. Both stand on the stripes below the curb; the camera man is the only one on the sidewalk. "
-  "magazine lowered to her chest, looking at LEADER. Camera C2 on the sidewalk, 2.6 m back from the curb. LEADER: 'Still paying Higgsfield for this?' Crew soft 2 m behind.",
-  [P("L", 2.85, -0.45, "stand", 90, "faces lens, speaking"), P("H", 3.2, -0.3, "stand", 120, "at the desk corner, looks at L"),
-   FE_home, SM_home, SL_home],
-  CAM(4.1, 2.6, (2.95, -0.45), z=1.5, pitch=-4, note="C2 · medium two-shot")),
+  "S2a 0:02  They stop at the desk's sofa-side end: HERO's right hip almost touches the desk corner, LEADER one step to her left (camera-right). Both face the lens; both on the stripes. LEADER: 'Still paying Higgsfield for this?' Crew soft on the sofa behind them.",
+  [P("L", 1.45, -3.45, "stand", 270, "faces lens, speaking"), P("H", 0.95, -3.4, "stand", 270, "at the desk corner, looks at L"), FE_home, SM_home, SL_home],
+  CAM(-2.98, -8.87, (1.2, -3.4), z=1.8, pitch=-7.7, note="C2 · medium two-shot")),
  ("S2b", "Push-in on LEADER",
-  "S2b 0:03  While LEADER speaks the camera walks in to 0.8 m: her face and upper body fill the frame, focus on her eyes, proud cute micro-expressions. "
-  "HERO is a soft shape at the right edge, still looking at LEADER. Nothing else sharp.",
-  [P("L", 2.85, -0.45, "stand", 90, "close-up"), P("H", 3.2, -0.3, "stand", 120, "soft, edge"), FE_home, SM_home, SL_home],
-  CAM(3.15, 0.75, (2.85, -0.45), z=1.5, pitch=0, note="C2+ · close on LEADER")),
+  "S2b 0:03  While LEADER speaks the camera walks in to 0.8 m: her face and upper body fill the frame, focus on her eyes. HERO a soft shape at the frame edge, looking at LEADER.",
+  [P("L", 1.45, -3.45, "stand", 270, "close-up"), P("H", 0.95, -3.4, "stand", 270, "soft, edge"), FE_home, SM_home, SL_home],
+  CAM(1.2, -4.9, (1.45, -3.45), z=1.5, pitch=2, note="C2+ · close on LEADER")),
  ("S3a", "HERO speaks; camera turns to her",
-  "S3a 0:04.5  HERO: 'We made Higgsfield 3x cheaper… I cost [$HF] on Higgsfield, and now [$TREG] on treg.' Camera pans from LEADER to HERO (small overshoot, refocus) and holds on her. "
-  "HERO looks lens → LEADER → lens; LEADER watches HERO, hand on her shoulder. Same marks as S2a.",
-  [P("L", 2.85, -0.45, "stand", 30, "watches H"), P("H", 3.2, -0.3, "stand", 100, "speaking to lens"), FE_home, SM_home, SL_home],
-  CAM(4.1, 2.6, (3.2, -0.3), z=1.5, pitch=-4, note="C2 · on HERO")),
+  "S3a 0:04.5  HERO's lines. Camera whips from LEADER to HERO and holds. HERO looks lens → LEADER → lens; LEADER watches HERO, hand on her shoulder. Same marks as S2a.",
+  [P("L", 1.45, -3.45, "stand", 230, "watches H"), P("H", 0.95, -3.4, "stand", 270, "speaking to lens"), FE_home, SM_home, SL_home],
+  CAM(-2.98, -8.87, (0.95, -3.4), z=1.8, pitch=-7.7, note="C2 · on HERO")),
  ("S3b", "Camera walks round to LEADER's left",
-  "S3b 0:07  Still on HERO's price line, the camera man walks along the curb to C3, on LEADER's LEFT (the sofa side), 1 m from her. Each step a dip, horizon rolls a degree or two. "
-  "In the near foreground: LEADER's left shoulder, kimono sleeve and the back of her bob, soft. HERO still talking beyond her. Desk and laptop behind them.",
-  [P("L", 2.85, -0.45, "stand", 40, "fg shoulder"), P("H", 3.2, -0.3, "stand", 150, "talking"), FE_home, SM_home, SL_home],
-  CAM(1.9, 0.6, (3.2, -0.35), z=1.5, pitch=-1, roll=3, note="C3 · arriving, over L's shoulder")),
+  "S3b 0:07  Still HERO's line; nobody moves. The camera man walks round to LEADER's LEFT (camera-right side), 1 m from her. Foreground: LEADER's left shoulder, sleeve and the back of her bob, soft. HERO talking beyond her; the sofa and crew behind.",
+  [P("L", 1.45, -3.45, "stand", 250, "fg shoulder"), P("H", 0.95, -3.4, "stand", 280, "talking"), FE_home, SM_home, SL_home],
+  CAM(2.5, -4.1, (0.95, -3.4), z=1.5, pitch=0, roll=3, note="C3 · arriving, over L's shoulder")),
  ("S4", "LEADER turns her head and speaks side-on",
-  "S4 0:10  LEADER keeps her body toward the desk but turns her head over her LEFT shoulder to the camera beside her: three-quarter profile, chest-up, sly proud half-smile, line TBD. "
-  "HERO behind her on the right, soft, smiling at her. Camera C3 standing still: only breath sway.",
-  [P("L", 2.85, -0.45, "stand", 150, "head turned to lens"), P("H", 3.2, -0.3, "stand", 170, "soft, smiling at L"), FE_home, SM_home, SL_home],
-  CAM(1.85, 0.5, (2.85, -0.45), z=1.5, pitch=0, note="C3 · side-on close-up")),
+  "S4 0:10  LEADER keeps her body toward the lens's old position and turns her head over her LEFT shoulder to the camera beside her: three-quarter profile, chest-up, sly proud half-smile. HERO behind her, soft, smiling at her.",
+  [P("L", 1.45, -3.45, "stand", 330, "head turned to lens"), P("H", 0.95, -3.4, "stand", 300, "soft, smiling at L"), FE_home, SM_home, SL_home],
+  CAM(2.55, -3.9, (1.45, -3.45), z=1.5, pitch=1, note="C3 · side-on close-up")),
  ("S5a", "Behind LEADER: over her left shoulder onto the laptop",
-  "S5a 0:11.5  LEADER steps to the laptop on the desk's near end and stands facing its screen (the screen faces the sofa, so she stands on the sofa side of the desk with her BACK to the sofa and to the camera). "
-  "The camera man steps in BEHIND her, slightly to her left, on the crossing, lens at her shoulder height looking past her left shoulder down onto the screen. We see the BACK of her black bob, the edge of her left ear, her left shoulder and kimono sleeve, soft and large at the RIGHT edge of the frame, and the glowing screen beyond in the middle. Her FACE IS NOT VISIBLE. HERO on LEADER's right, seen from behind-three-quarter, leaning in.",
-  [P("L", 3.0, -0.55, "stand", 0, "back to camera, at the desk edge"), P("H", 2.95, -1.1, "stand", 25, "leans in"), FE_home, SM_home, SL_home],
-  CAM(2.5, 0.08, (3.58, -0.62), z=1.55, pitch=-20, note="C4 · behind her, over the left shoulder")),
- ("S5b", "Push-in past her shoulder to the screen",
-  "S5b 0:12.5  From behind her the camera pushes forward past her left shoulder until the plain glowing screen fills most of the frame: the back of her bob and the edge of her shoulder slide out of frame on the right, soft. Still no face. No UI, no logo. Hand-off frame for the match cut to the screen recording.",
-  [P("L", 3.0, -0.55, "stand", 0, "back of head, soft"), P("H", 2.95, -1.1, "stand", 25, "")],
-  CAM(2.95, -0.15, (3.58, -0.62), z=1.25, pitch=-16, note="C4+ · screen fills frame")),
+  "S5a 0:11.5  LEADER steps to the desk's sofa-side end, lifts the laptop and holds it at chest height, screen toward her (toward the sofa side), lid toward the road. Her BACK is to the sofa. The camera man steps in BEHIND her, between her and the sofa, slightly to her left: back of her bob, left ear edge, left shoulder and sleeve large and soft on the right of frame; the glowing screen past her shoulder. HERO on her right, leaning in. No face.",
+  [P("L", 1.35, -3.55, "stand", 270, "back to camera, laptop in hands"), P("H", 0.85, -3.6, "stand", 290, "leans in"), FE_home, SM_home, SL_home],
+  CAM(1.75, -2.5, (1.3, -3.9), z=1.55, pitch=-18, note="C4 · behind her, over the left shoulder")),
+ ("S5b", "Push past her shoulder to the screen",
+  "S5b 0:12.5  From behind her the camera pushes forward past her left shoulder until the plain glowing screen fills most of the frame; her bob and shoulder slide out of frame on the right. Still no face. Beyond the screen: her hands, the desk top, the stripes and the road.",
+  [P("L", 1.35, -3.55, "stand", 270, "back of head, soft"), P("H", 0.85, -3.6, "stand", 290, "")],
+  CAM(1.6, -3.0, (1.3, -3.9), z=1.35, pitch=-14, note="C4+ · screen fills frame")),
 ]
 
 if __name__ == "__main__":
