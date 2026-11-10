@@ -34,21 +34,21 @@ The sheets carry identity, hair, body and outfit only. Lighting for every shot c
 - The plans and prompts are in the claude.ai Project "aigc" (`treg-ugc-*.md`).
 
 ## Prompt references (v4.0, Nov 10) — use these, never the sheets, never an old keyframe
-Fixed order for every still or video call (max 9 images):
+Fixed order for every still call (12 images; reAPI allows 14). Each person = a FACE board (faces only, same person 3–4 times, age labelled) + an OUTFIT photo with the head cropped off, so the model can only take the face from the face board.
 
 | # | File | Role | What it is |
 |---|---|---|---|
 | 1 | `cast/leader_face.jpg` | LEADER face | 3 sheet face views + the approved in-scene face, labelled "same young woman, about 25" |
-| 2 | `cast/leader_body.jpg` | LEADER body | full-body front, the yukata |
+| 2 | `cast/leader_body.jpg` | LEADER outfit | front + back, head cropped |
 | 3 | `cast/hero_face.jpg` | HERO face | 3 sheet face views + the approved in-scene face |
-| 4 | `cast/hero_body.jpg` | HERO body | full-body front, tank + trousers |
-| 5 | `cast/feather.jpg` | FEATHER | face left, body right |
-| 6 | `cast/slicked.jpg` | SLICKED | face left, body right |
-| 7 | `cast/silverman.jpg` | SILVERMAN | face left, body right |
-| 8 | `plates/P-C2.jpg` (or the beat's camera mark) | empty set | building, crossing, sofa, desk, laptop from that camera — fixes the furniture |
-| 9 | `blocking/shots/<beat>.png` | blocking diagram | top view + projected camera view with every person and prop as a labelled shape |
+| 4 | `cast/hero_body.jpg` | HERO outfit | front + back, head cropped |
+| 5–6 | `cast/feather_face.jpg`, `cast/feather_body.jpg` | FEATHER | face board / headless outfit |
+| 7–8 | `cast/slicked_face.jpg`, `cast/slicked_body.jpg` | SLICKED | face board / headless outfit |
+| 9–10 | `cast/silverman_face.jpg`, `cast/silverman_body.jpg` | SILVERMAN | face board / headless outfit |
+| 11 | `plates/P-C2.jpg` (or the beat's camera mark) | empty set | building, crossing, sofa, desk, laptop from that camera — fixes the furniture |
+| 12 | `blocking/shots/<beat>.png` | blocking diagram | top view + projected camera view with every person and prop as a labelled shape |
 
-Old single crops `cast/leader.jpg` and `cast/hero.jpg` are superseded by the face/body pairs.
+The old single crops (`cast/leader.jpg` … `cast/silverman.jpg`, face + body in one file) are deleted; they let the model pick a face from the body panel.
 
 ## Blocking (`blocking/`)
 - `set_layout.png` — top-view floor plan of the fixed set (sofa on the crossing perpendicular to the curb, desk 2 m along at 30°, laptop screen facing the sofa).
