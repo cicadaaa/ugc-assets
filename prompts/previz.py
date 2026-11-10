@@ -15,7 +15,7 @@ def mk(cx, cy, cz, yawdeg, pitch):
 
 PLATE_CAM = mk(-2.981, -8.875, 1.796, 47.2, -7.75)   # fitted to scene_empty.jpg + Chia's couch/desk boxes
 
-COL = {'L': (30, 30, 30), 'H': (232, 210, 122), 'FE': (165, 143, 214), 'SM': (154, 163, 173), 'SL': (199, 185, 166)}
+COL = {'L': (150, 150, 150), 'H': (150, 150, 150), 'FE': (150, 150, 150), 'SM': (150, 150, 150), 'SL': (150, 150, 150)}  # neutral grey: the colour must not leak into the outfit
 FCOL = {'sofa': (239, 232, 218), 'table': (228, 217, 195), 'desk': (214, 185, 140), 'laptop': (201, 205, 210),
         'screen': (120, 170, 255), 'lamp': (20, 20, 20), 'chair': (168, 116, 63)}
 
@@ -96,4 +96,4 @@ def render(people, cam=None, out=None, label=''):
 if __name__ == '__main__':
     beats = {b[0]: b for b in sd.SHOTS}
     for sid in ['S1a', 'S1b', 'S2a', 'S3a']:
-        render(beats[sid][3], out=f'/home/claude/treg-ugc-assets/blocking/previz/{sid}.jpg', label=f'{sid}  stand-ins: replace each coloured box with the real person or furniture in exactly this spot')
+        render(beats[sid][3], out=f'/home/claude/treg-ugc-assets/blocking/previz/{sid}.jpg', label=f'{sid}  stand-ins: grey boxes = people (label = who), coloured boxes = furniture. Replace each in exactly this spot.')
