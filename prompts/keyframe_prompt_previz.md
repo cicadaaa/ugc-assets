@@ -1,0 +1,26 @@
+# Keyframe prompt v6 — stand-in (previz) method
+
+Images: 1-5 `cast/*.jpg`, 6 `blocking/previz/<beat>.jpg`, 7 `props/sofa_table.jpg`, 8 `props/desk_set.jpg`. 16:9, 2K.
+
+```
+Images 1-5 are five different people, ONE file per person: the photo on the LEFT is that person's only face; the photos on the RIGHT are that person's outfit from the front and back with the head and hair deliberately removed. Copy each face exactly from the left photo and each outfit exactly from the right photos; never blend or swap; never invent anyone.
+Image 1 = LEADER: about 25, black blunt bob with a straight fringe, the ONLY person in a kimono: an OFF-WHITE yukata with thin charcoal pinstripes, wide charcoal obi, white tabi, wooden zori.
+Image 2 = HERO: about 24, the ONLY platinum blonde, freckles, black scoop tank, white pleated trousers, black Mary Janes, the ONLY one with the magazine (blank off-white pages).
+Image 3 = FEATHER: long wavy black hair, lavender ostrich-feather dress. Image 4 = SLICKED: slicked-back low bun, white drop-waist midi, oatmeal knit over the shoulders. Image 5 = SILVERMAN: the only man, shoulder-length silver hair, white tee, beige chinos.
+Image 6 IS THE FRAME: the real location photograph with stand-ins pasted on it. Keep the photograph exactly as it is (same camera, framing, building, sidewalk, curb, zebra stripes, puddles, light, grain) and replace each stand-in with the real thing in exactly that spot, at exactly that size, facing the way its red dot (the nose) points. Grey boxes are PEOPLE: the name written on each grey box says who it is (LEADER, HERO, FEATHER, SILVER = SILVERMAN, SLICKED); the grey colour means nothing, take the clothes only from images 1-5. A grey box sitting on the sofa or table is that person sitting there. Coloured boxes are FURNITURE: the long cream box = the cream boucle sofa and the round box = the travertine table (look: image 7); the wooden slab on legs = the light oak desk, the small blue-and-grey box on it = the open silver laptop with its SCREEN FACING THE SOFA and its blank lid toward the camera, the black dome on a stem = the dome lamp switched on, the brown round seat = the tan leather chair (look: image 8).
+Remove every label, red dot and box outline; nothing of the diagram may remain. Photoreal, natural skin with pores, soft overcast light matching the plate, Fujifilm X100VI 23mm, Eterna, fine grain, 16:9.
+
+THIS FRAME (<beat>): <beat text>
+
+Avoid: moving or resizing anything from where its stand-in is, extra people, a second kimono, a second blonde, a dark kimono, text on the magazine, a logo on the laptop, a laptop turned toward the camera, leftover boxes, labels or dots, airbrushed skin, direct sun, a vertical frame.
+```
+
+Beat texts used for v10:
+
+- **S1a**: THIS FRAME (S1a): all five at the sofa. LEADER sits on the sofa at its road end (the end nearest the desk), legs crossed, glancing up at the camera with a half-smile; HERO sits right beside her, closed magazine on her lap, laughing; FEATHER kneels on the seat behind them, bouncing; SILVERMAN sits on the far armrest; SLICKED sits on the travertine table. The desk stands empty nearer the camera. Handheld, frame a degree off level.
+- **S1b**: THIS FRAME (S1b): LEADER and HERO have stood up and walk toward the camera on the zebra stripes, between the sofa and the desk, mid-step. HERO on LEADER's right holds the open blank magazine up over her face, only her eyes over the top edge; LEADER, sharp, eyes on the lens, chin up, proud little smile, sleeves swinging. The others stay on the sofa and table behind them. Slight motion blur at the frame edges from the camera man walking backward, frame tilted 2 degrees.
+- **S2a**: THIS FRAME (S2a): LEADER and HERO stand side by side at the desk's sofa-side end facing the camera, HERO's hip at the desk corner. LEADER mid-word, eyebrows up, playful proud look, eyes on the lens; HERO holds the open blank magazine at her chest and grins at LEADER. On the sofa behind: FEATHER kneeling, SILVERMAN on the armrest, SLICKED on the table.
+- **S2b**: THIS FRAME (S2b): a push-in on LEADER: chest-up, sharp on her eyes, looking straight into the lens mid-sentence, chin lifted a touch, one corner of her mouth curling up, a small proud squint. HERO beside her, partly in frame, soft, looking at her. Background soft. Real skin up close.
+- **S3a**: THIS FRAME (S3a): HERO is speaking to the lens with a smirk breaking into a grin, the open blank magazine at her chest; LEADER beside her watches HERO with a closed-lip proud smirk, one hand on HERO's shoulder. On the sofa behind: FEATHER kneeling, SILVERMAN on the armrest glancing at HERO, SLICKED on the table. Focus on HERO.
+- **S3b**: THIS FRAME (S3b): tighter two-shot. HERO talking to the lens, eyes moving to LEADER; LEADER turned toward HERO, watching her, proud. The sofa and the others soft behind; the desk corner and laptop beside them. Handheld, horizon rolled 2 degrees.
+- **S4**: THIS FRAME (S4): close on LEADER, chest-up: her body faces the camera's old position but she has turned her head over her LEFT shoulder toward the camera, three-quarter profile, sly proud half-smile, mouth mid-word, fringe moving in the breeze. HERO beside her, soft, smiling at her.
