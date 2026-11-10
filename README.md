@@ -33,22 +33,20 @@ The sheets carry identity, hair, body and outfit only. Lighting for every shot c
 - Images were made with Gemini 3 Pro Image through treg.
 - The plans and prompts are in the claude.ai Project "aigc" (`treg-ugc-*.md`).
 
-## Prompt references (v4.0, Nov 10) — use these, never the sheets, never an old keyframe
-Fixed order for every still call (12 images; reAPI allows 14). Each person = ONE face photo (front view only, one face per file, nothing else in the frame) + ONE outfit photo with the head cropped off, so the model can only take the face from the face file and never sees two faces in one image. The multi-view boards live in `cast/boards/` for human review only.
+## Prompt references (v4.1, Nov 10) — use these, never the sheets, never an old keyframe
+**One JPG per person.** Each file = that person's ONE front-view face on the left + their outfit front and back on the right, with the head AND all hair removed from the outfit photos, so the only face (and hair) in the file is the face on the left. Fixed order for every still call (7 images):
 
-| # | File | Role | What it is |
+| # | File | Role | Unique anchor |
 |---|---|---|---|
-| 1 | `cast/leader_face.jpg` | LEADER face | one face, front view |
-| 2 | `cast/leader_body.jpg` | LEADER outfit | front + back, head cropped |
-| 3 | `cast/hero_face.jpg` | HERO face | one face, front view |
-| 4 | `cast/hero_body.jpg` | HERO outfit | front + back, head cropped |
-| 5–6 | `cast/feather_face.jpg`, `cast/feather_body.jpg` | FEATHER | one face, front / headless outfit |
-| 7–8 | `cast/slicked_face.jpg`, `cast/slicked_body.jpg` | SLICKED | one face, front / headless outfit |
-| 9–10 | `cast/silverman_face.jpg`, `cast/silverman_body.jpg` | SILVERMAN | one face, front / headless outfit |
-| 11 | `plates/P-C2.jpg` (or the beat's camera mark) | empty set | building, crossing, sofa, desk, laptop from that camera — fixes the furniture |
-| 12 | `blocking/shots/<beat>.png` | blocking diagram | top view + projected camera view with every person and prop as a labelled shape |
+| 1 | `cast/leader.jpg` | LEADER | the only black blunt bob + fringe, the only kimono |
+| 2 | `cast/hero.jpg` | HERO | the only platinum blonde, the only one with the magazine |
+| 3 | `cast/feather.jpg` | FEATHER | the only lavender feather dress |
+| 4 | `cast/slicked.jpg` | SLICKED | the only slicked-back bun, white midi + knit |
+| 5 | `cast/silverman.jpg` | SILVERMAN | the only man, silver hair |
+| 6 | `plates/P-C2.jpg` (or the beat's camera mark) | empty set | fixes every piece of furniture |
+| 7 | `blocking/shots/<beat>.png` | blocking diagram | where each person and prop lands in frame |
 
-The old single crops (`cast/leader.jpg` … `cast/silverman.jpg`, face + body in one file) are deleted; they let the model pick a face from the body panel.
+Multi-view face boards are in `cast/boards/` for human review only.
 
 ## Blocking (`blocking/`)
 - `set_layout.png` — top-view floor plan of the fixed set (sofa on the crossing perpendicular to the curb, desk 2 m along at 30°, laptop screen facing the sofa).
