@@ -66,8 +66,8 @@ person(0.25, -1.4, "SL", "#c7b9a6", txt="black")
 LEADER, HERO, CAM = "#222222", "#e8d27a", "#d2452c"
 person(1.35, -0.55, "L1", LEADER)
 person(1.35, -1.25, "H1", HERO, txt="black")
-person(2.45, -0.45, "L2", LEADER)
-person(3.0, -0.2, "H2", HERO, txt="black")
+person(2.35, -0.5, "L2", LEADER)
+person(2.95, -0.1, "H2", HERO, txt="black")
 person(3.2, -0.75, "L3", LEADER, r=0.17)
 person(3.15, -1.25, "H3", HERO, r=0.17, txt="black")
 
@@ -83,29 +83,29 @@ def cam(x, y, face_deg, label, note, nx, ny):
     ax.add_patch(Rectangle((x - 0.14, y - 0.14), 0.28, 0.28, fc=CAM, ec="black", lw=.8, zorder=8))
     ax.text(nx, ny, f"{label}  {note}", fontsize=7.3, color="#8a2414", weight="bold", zorder=9)
 
-cam(2.3, 1.3, -113, "C1", "arrives, faces the sofa", 0.25, 1.25)
+cam(2.6, 1.5, -113, "C1", "arrives, faces the sofa", 0.3, 1.45)
 cam(3.9, 1.65, -118, "C2", "backed up; L or H as each speaks", 4.1, 1.75)
-cam(3.13, 0.25, -118, "C2+", "push-in, leader", 3.45, 0.5)
-cam(1.95, 0.15, -41, "C3", "leader's LEFT, at the curb", -0.25, 0.1)
-cam(2.45, 0.25, -35, "C4", "over left shoulder", 0.35, 0.6)
-arrow((2.45, 1.38), (3.72, 1.6), CAM, ls="--", lw=1.6)
+cam(2.75, 0.4, -118, "C2+", "push-in, leader", 3.0, 0.55)
+cam(1.6, 0.3, -35, "C3", "leader's LEFT, at the curb", -0.45, 0.45)
+cam(2.6, -0.2, -22, "C4", "BEHIND her, over left shoulder", 1.55, -1.75)
+arrow((2.75, 1.52), (3.72, 1.62), CAM, ls="--", lw=1.6)
 ax.text(2.55, 1.6, "walks BACKWARD", fontsize=6.8, color=CAM, rotation=8)
-arrow((3.7, 1.75), (2.05, 0.35), CAM, ls="--", lw=1.4, rad=0.35)
-arrow((2.1, 0.3), (2.35, 0.3), CAM, ls="--", lw=1.2)
-arrow((2.6, 0.15), (3.45, -0.5), CAM, ls=":", lw=1.4)
+arrow((3.7, 1.75), (1.75, 0.45), CAM, ls="--", lw=1.4, rad=0.35)
+arrow((1.75, 0.15), (2.4, -0.1), CAM, ls="--", lw=1.2, rad=0.3)
+arrow((2.75, -0.25), (3.45, -0.5), CAM, ls=":", lw=1.4)
 
-fig.text(0.02, 0.975, "treg hook — blocking map v7 (top view, metres)", fontsize=13, weight="bold", va="top")
+fig.text(0.02, 0.975, "treg hook — blocking map v8 (top view, metres)", fontsize=13, weight="bold", va="top")
 fig.text(0.98, 0.975, "L leader · H hero · FE feather · SM silverman · SL slicked · red = camera", fontsize=8.5, ha="right", va="top")
 beats = [
     "B1  L and H are sitting on the sofa with the crew. C1 arrives on the sidewalk; they stand up and walk the ~2 m along the curb to the desk; camera walks backward to C2.",
     "B2  At the desk (L2/H2). LEADER speaks to the lens; camera pushes in to C2+.",
     "B3  HERO speaks: camera pans to her, then walks round to C3, the leader's LEFT.",
     "B4  LEADER turns her head left and speaks to C3 side-on.",
-    "B5  LEADER steps round to face the laptop screen (L3), HERO stays at her right (H3); camera to C4, over her left shoulder, pushes into the screen.",
+    "B5  LEADER steps to the laptop and faces its screen, BACK to the camera (L3); HERO at her right (H3). Camera to C4 BEHIND her on the crossing: back of her bob + left shoulder, then pushes past it into the screen. No face.",
     "Sofa AND desk on the zebra crossing at the curb, ≈2 m apart. Laptop screen faces the sofa. HERO is ALWAYS right beside LEADER, on her right. Crew stay around the sofa.",
 ]
 fig.text(0.02, 0.015, "\n".join(beats), fontsize=8.6, va="bottom",
          bbox=dict(fc="white", ec="#999", boxstyle="round,pad=0.5"))
 plt.subplots_adjust(left=0.01, right=0.99, top=0.95, bottom=0.14)
-plt.savefig("/home/claude/treg-ugc-assets/blocking/paths_v7.png")
+plt.savefig("/home/claude/treg-ugc-assets/blocking/paths_v8.png")
 print("ok")

@@ -1,6 +1,8 @@
-# treg AIGC promo: hook shot plan v5.0, 0:00–0:13 (Nov 10, 2026)
+# treg AIGC promo: hook shot plan v5.1, 0:00–0:13 (Nov 10, 2026)
 
 **v5.0 is a clean rewrite.** Everything that was superseded (portrait 9:16 frame, furnished plates, per-camera plates, older prop crops, character sheets, earlier keyframes) is gone from this plan and from the repo. What is here is current.
+
+**v5.1 (same day): checked against the top-view blocking, camera moves enriched.** Every mark in section 6 was read back against `blocking/paths_v8.png` and `blocking/set_layout.png` (positions, facings, HERO on LEADER's right, laptop screen toward the sofa, camera path C1→C2→C2+→C3→C4). New section 4b: a camera-move vocabulary and one distinct move per beat, all handheld.
 
 **What changed in v5.0**
 - **Frame is 16:9 landscape** (X's wide video format). The X100VI is held horizontally.
@@ -42,9 +44,23 @@ Base: `https://raw.githubusercontent.com/cicadaaa/ugc-assets/main/`
 | File | What |
 |---|---|
 | `blocking/set_layout.png` | top view of the fixed set |
-| `blocking/paths_v7.png` | walking paths and camera marks C1–C4 |
+| `blocking/paths_v8.png` | walking paths and camera marks C1–C4 |
 | `blocking/shots/S1a.png … S5b.png` | one diagram per beat: top view + the projected 16:9 camera view with every person and prop as a labelled shape |
 | `blocking/shots/_all_shots.jpg` | all nine together |
+
+**Consistency contract (what keeps every frame the same):**
+
+| What | Comes from | Never from |
+|---|---|---|
+| Faces | `cast/<name>.jpg`, the one face on the left | a keyframe, a sheet, the prompt's imagination |
+| Outfits | `cast/<name>.jpg`, the headless outfit on the right | — |
+| The street | `plates/scene_empty.jpg` | any other plate |
+| Furniture look | `props/sofa_table.jpg`, `props/desk_set.jpg` | — |
+| Furniture position | the beat's `blocking/shots/<beat>.png` | the model's own layout |
+| People position and facing | the beat's diagram, drawn from `paths_v8.png` | — |
+| Camera position, height, direction | the beat's diagram (red square + wedge) | — |
+
+If any of these is wrong in a still, the still is re-rolled; nothing is "fixed in video".
 
 **Locked location text (paste into video prompts):**
 ```
@@ -107,6 +123,26 @@ Avoid: airbrushed skin, studio light, direct sun, extra people, passers-by, a se
 The camera follows whoever is speaking. While the woman with the black bob speaks, the camera walks in close until her face and upper body fill most of the frame, focused on her eyes, catching her small proud, cute facial movements and the fine creases at the outer corners of her eyes when she smiles. While the platinum blonde speaks, the camera turns to her; she looks back and forth between the camera and the bob-haired woman, who watches her. The listener always looks at the speaker. Now and then one of the people in the background glances over at whoever is speaking, then goes back to their chat; they never look into the lens.
 ```
 
+## 4b. Camera moves — handheld vocabulary, one distinct move per beat
+
+Every move is by the same young man holding the X100VI in one or two hands: no gimbal, no slider, no drone. Each beat uses a different move so the 13 seconds never feel static, and each move is motivated by what the people do.
+
+| Move | What it looks like | Used in |
+|---|---|---|
+| **Arrive-and-settle** | the last two steps of a walk: bob, bob, a small overshoot of the frame, then it settles with breath sway | S1a |
+| **Walking backward** | short uneven steps, soft vertical bob on each, slight side sway, horizon tilts 1–3° and is corrected; one glance-back jolt | S1b |
+| **Tilt-up on the rise** | as LEADER stands, the camera tilts up with her, a beat late, so her head briefly clips the top of frame and he corrects | S1b (start) |
+| **Rack focus** | focus hunts from one person to the other and settles; the out-of-focus one goes soft | S2a (HERO → LEADER as she starts talking), S5a (shoulder → screen) |
+| **Push-in** | 2–3 small forward steps, a dip on each, framing tightens from waist-up to chest-up/close-up | S2b |
+| **Whip pan** | a fast hand pan that overshoots a touch and snaps back; a frame of motion blur | S3a (LEADER → HERO) |
+| **Arc** | walking a quarter circle around someone; each step a dip, the background sweeps past, horizon rolls and levels | S3b (C2 → C3) |
+| **Hold with breath** | standing close, only breathing and micro-corrections; a small reframe when the subject moves | S4 |
+| **Step-in behind** | a step and a half round behind someone: dip, slight roll, the back of their head enters frame large | S5a |
+| **Slow push past** | pushing forward past a shoulder until the thing beyond fills the frame; a little wobble, 1° tilt | S5b |
+| **Low-angle beat** (optional) | for one moment in S1b the camera dips to waist height on a step and comes back up, so the stripes rush in the lower frame | S1b (one step) |
+
+**Rule:** moves never cross the blocking. The camera stays on the marks in `paths_v8.png`; the moves happen on the way between marks or in place.
+
 ## 5. Cast: constant motion signatures
 These hold in every shot; the per-shot tables in section 6 add what each person does in that moment.
 
@@ -128,6 +164,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 - **Camera:** C1 — wide, sidewalk, 2.6 m from the sofa. 16:9 landscape.
 - **Beat:** LEADER sits at the curb end of the sofa; HERO right beside her on her right (road side), magazine closed on her lap. FEATHER bounces on the far seat; SILVERMAN hops on and off the road-end armrest; SLICKED stands behind the sofa back on tiptoe. LEADER glances up at the lens. The desk is two metres along the curb at the right of frame.
 - **Handheld:** Camera man arriving: last two steps, a small bob, settles; frame drifts a degree and corrects.
+- **Move:** arrive-and-settle. He walks the last two steps toward the sofa, the frame bobs twice, overshoots slightly past LEADER and settles on the group. Rack: the frame is on the whole group; focus sits on LEADER.
 - **Asset lock (paste into this beat's prompt):** ASSET LOCK: the location is image 6 and it never changes. The sofa and table look exactly like image 7, the desk, laptop, lamp and chair look exactly like image 8, and every one of them stands exactly where image 9 puts it. Do not move, add, restyle or reinvent any furniture, building, curb or stripe. Every person's face and outfit come only from images 1-5.
 
 ### S1b · They stand and walk; camera backs up · 0:00.8–0:02
@@ -135,6 +172,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 - **Camera:** C1→C2 — walking backward along the sidewalk. 16:9 landscape.
 - **Beat:** LEADER and HERO are up and walking along the curb toward the desk and the lens, HERO glued to LEADER's right, magazine open over her face. Crew stays at the sofa 1–2 m behind, soft. LEADER's eyes on the lens.
 - **Handheld:** Short uneven backward steps, a soft bob on each, slight sway, horizon tilts ~2° and is corrected; one glance over his shoulder (small jolt) before the desk.
+- **Move:** tilt-up on the rise, then walking backward. As LEADER stands the camera tilts up a beat late, her head clips the top edge and he corrects; then he backs up along the sidewalk, short uneven steps, soft bob, 1–3° tilt corrected each step; one step dips to waist height and comes back up; one glance-back jolt before the desk.
 - **Asset lock (paste into this beat's prompt):** ASSET LOCK: the location is image 6 and it never changes. The sofa and table look exactly like image 7, the desk, laptop, lamp and chair look exactly like image 8, and every one of them stands exactly where image 9 puts it. Do not move, add, restyle or reinvent any furniture, building, curb or stripe. Every person's face and outfit come only from images 1-5.
 
 ### S2a · At the desk; LEADER starts her line · 0:02–0:03
@@ -142,6 +180,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 - **Camera:** C2 — medium two-shot, 1.7 m back from the curb. 16:9 landscape.
 - **Beat:** They stop beside the desk's near (laptop) end. LEADER faces the lens and starts: "Still paying Higgsfield for this?" HERO at her right, between her and the desk, magazine at her chest, looking at LEADER. Crew soft behind at the sofa.
 - **Handheld:** Standing: breath sway, small framing corrections.
+- **Move:** stop and rack focus. He stops at C2 with a small settle; focus is briefly on HERO's magazine and racks to LEADER's eyes as she opens her mouth.
 - **Asset lock (paste into this beat's prompt):** ASSET LOCK: the location is image 6 and it never changes. The sofa and table look exactly like image 7, the desk, laptop, lamp and chair look exactly like image 8, and every one of them stands exactly where image 9 puts it. Do not move, add, restyle or reinvent any furniture, building, curb or stripe. Every person's face and outfit come only from images 1-5.
 
 ### S2b · Push-in on LEADER · 0:03–0:04.5
@@ -149,6 +188,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 - **Camera:** C2+ — close-up, 0.8 m. 16:9 landscape.
 - **Beat:** Face and upper body fill the frame, focus on her eyes: chin lift, mouth corner curling, a proud squint. HERO a soft shape at the frame edge watching her. Sofa and stripes very soft behind.
 - **Handheld:** Two or three small forward steps, a dip on each; on the hold, breathing; focus breathes then settles on her eyes.
+- **Move:** push-in. Two or three small forward steps, a dip on each, from waist-up to chest-up to a close-up; on the hold, breath sway; focus breathes and settles on her eyes.
 - **Asset lock (paste into this beat's prompt):** ASSET LOCK: the location is image 6 and it never changes. The sofa and table look exactly like image 7, the desk, laptop, lamp and chair look exactly like image 8, and every one of them stands exactly where image 9 puts it. Do not move, add, restyle or reinvent any furniture, building, curb or stripe. Every person's face and outfit come only from images 1-5.
 
 ### S3a · HERO speaks; camera turns to her · 0:04.5–0:07
@@ -156,6 +196,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 - **Camera:** C2 — medium on HERO. 16:9 landscape.
 - **Beat:** HERO: "We made Higgsfield 3x cheaper… I cost [$HF] on Higgsfield, and now [$TREG] on treg." HERO looks lens → LEADER → lens; LEADER at the frame edge watches her, hand on her shoulder. Same marks as S2a: same street, same sofa behind, same desk beside HERO.
 - **Handheld:** Quick hand pan from LEADER to HERO, overshoots a touch and settles; focus hunts a beat, then locks on HERO.
+- **Move:** whip pan. On HERO's first word the camera whips from LEADER to HERO, overshoots a touch, snaps back; focus hunts a beat, locks on HERO.
 - **Asset lock (paste into this beat's prompt):** ASSET LOCK: the location is image 6 and it never changes. The sofa and table look exactly like image 7, the desk, laptop, lamp and chair look exactly like image 8, and every one of them stands exactly where image 9 puts it. Do not move, add, restyle or reinvent any furniture, building, curb or stripe. Every person's face and outfit come only from images 1-5.
 
 ### S3b · Camera walks round to LEADER's left · 0:07–0:10
@@ -163,6 +204,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 - **Camera:** C2→C3 — arriving on LEADER's left, 1 m. 16:9 landscape.
 - **Beat:** Still HERO's price line. The camera man walks along the curb to LEADER's LEFT (sofa side). Foreground: LEADER's left shoulder, sleeve and the back of her bob, soft. HERO talking beyond her; the desk and laptop behind HERO.
 - **Handheld:** Each step a visible dip; the horizon rolls 2–3° and levels as he stops.
+- **Move:** arc. Still on HERO's line he walks a quarter circle along the curb to LEADER's left; each step a dip, the sofa and building sweep across the background, the horizon rolls 2–3° and levels as he stops; LEADER's shoulder grows into the left foreground.
 - **Asset lock (paste into this beat's prompt):** ASSET LOCK: the location is image 6 and it never changes. The sofa and table look exactly like image 7, the desk, laptop, lamp and chair look exactly like image 8, and every one of them stands exactly where image 9 puts it. Do not move, add, restyle or reinvent any furniture, building, curb or stripe. Every person's face and outfit come only from images 1-5.
 
 ### S4 · LEADER turns her head and speaks side-on · 0:10–0:11.5
@@ -170,6 +212,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 - **Camera:** C3 — side-on close-up, 1 m. 16:9 landscape.
 - **Beat:** LEADER keeps her body toward the desk and turns her head over her LEFT shoulder to the camera: three-quarter profile, chest-up, sly proud half-smile. Line **TBD**. HERO behind her on the right, soft, smiling at her.
 - **Handheld:** Standing still: breath sway; a small reframe as she turns her head.
+- **Move:** hold with breath. Standing 1 m away, only breathing and micro-corrections; a small reframe as her head turns to him.
 - **Asset lock (paste into this beat's prompt):** ASSET LOCK: the location is image 6 and it never changes. The sofa and table look exactly like image 7, the desk, laptop, lamp and chair look exactly like image 8, and every one of them stands exactly where image 9 puts it. Do not move, add, restyle or reinvent any furniture, building, curb or stripe. Every person's face and outfit come only from images 1-5.
 
 ### S5a · BEHIND LEADER: over her left shoulder onto the laptop · 0:11.5–0:12.5
@@ -177,6 +220,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 - **Camera:** C4 — behind her, lens at her shoulder height. 16:9 landscape.
 - **Beat:** LEADER steps to the laptop on the desk's near end and stands facing its screen. **The screen faces the sofa, so she stands on the sofa side of the desk with her BACK to the camera.** The camera man steps in BEHIND her, slightly to her left. **Her face is NOT visible.** What the camera sees: the back of her black bob and the edge of her left ear, her left shoulder and the pinstripe kimono sleeve, large and soft at the right edge of the frame; past her shoulder, the open laptop on the desk with its plain glowing screen, sharp in the middle of the frame. HERO on LEADER's right, seen from behind three-quarter, leaning toward the screen. The laptop never moves.
 - **Handheld:** A step and a half in behind her: a dip, a slight roll; focus racks from her shoulder to the screen.
+- **Move:** step-in behind + rack focus. A step and a half round behind her onto the crossing: a dip, a slight roll; the back of her bob enters frame large on the right; focus racks from her shoulder to the screen.
 - **Asset lock (paste into this beat's prompt):** ASSET LOCK: the location is image 6 and it never changes. The sofa and table look exactly like image 7, the desk, laptop, lamp and chair look exactly like image 8, and every one of them stands exactly where image 9 puts it. Do not move, add, restyle or reinvent any furniture, building, curb or stripe. Every person's face and outfit come only from images 1-5.
 
 ### S5b · Push past her shoulder into the screen · 0:12.5–0:13
@@ -184,6 +228,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 - **Camera:** C4+ — screen fills the frame. 16:9 landscape.
 - **Beat:** From behind her, the camera pushes forward past her left shoulder until the plain glowing screen fills most of the frame. The back of her bob and her shoulder slide out of frame on the right, soft. **Still no face.** No UI, no logo. Hand-off frame for the match cut to the screen recording.
 - **Handheld:** A slow handheld push with a little wobble; a one-degree tilt.
+- **Move:** slow push past. He pushes forward past her left shoulder; her bob and shoulder slide out on the right; the screen fills the frame; a little wobble, a 1° tilt; the last frame is the hand-off.
 - **Asset lock (paste into this beat's prompt):** ASSET LOCK: the location is image 6 and it never changes. The sofa and table look exactly like image 7, the desk, laptop, lamp and chair look exactly like image 8, and every one of them stands exactly where image 9 puts it. Do not move, add, restyle or reinvent any furniture, building, curb or stripe. Every person's face and outfit come only from images 1-5.
 
 **Video routing:**
@@ -225,7 +270,7 @@ Both are rendered in code with the real fonts, so the type is exact and cannot b
 
 ## 9. Gate 2 — 480p drafts
 - Identity holds through the clip; no face or outfit swaps.
-- Handheld reads as one man with a camera, never a glide.
+- Handheld reads as one man with a camera, never a glide; each clip shows its one move from section 4b (settle, tilt-up + walk-back, rack, push-in, whip pan, arc, hold, step-in, push past).
 - Every visible person moves.
 - Lip sync stays inside the slot.
 - Furniture never moves.

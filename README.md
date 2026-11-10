@@ -23,7 +23,7 @@ Only the files below exist. Every image call uses them through these public link
 
 ## Blocking (`blocking/`)
 - `set_layout.png` — top view of the fixed set: sofa on the zebra crossing perpendicular to the curb, seat facing the desk; desk 2 m along at 30°; laptop on the near end, screen facing the sofa.
-- `paths_v7.png` — walking paths and camera marks C1–C4.
+- `paths_v8.png` — walking paths and camera marks C1–C4.
 - `shots/S1a.png … S5b.png` — one diagram per beat (top view + projected camera view); `shots/_all_shots.jpg` shows all nine.
 
 ## Plates (`plates/`)
@@ -36,6 +36,6 @@ Only the files below exist. Every image call uses them through these public link
 - `magazine_spread.png`, `treg_logo.png`
 
 ## Scripts (`prompts/`)
-- `shotdiagrams.py`, `set_layout.py`, `blocking_v7.py` — redraw the blocking images.
+- `shotdiagrams.py`, `set_layout.py`, `blocking_v8.py` — redraw the blocking images.
 
 Everything older (character sheets, face boards, prop sheets, all earlier keyframes, the furnished and portrait plates, drafts, storyboards) was removed on Nov 10 so nothing can reference it by mistake. It is still in the git history if ever needed.
