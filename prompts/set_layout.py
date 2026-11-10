@@ -36,4 +36,4 @@ ax.text(1.95, -0.25, "LAPTOP SCREEN\nFACES THE SOFA", fontsize=8, color="#1f5fbf
 ax.text(5.0, -1.3, "lamp", fontsize=8, color="w"); ax.text(5.75, -0.8, "chair", fontsize=8, color="w")
 ax.text(-1.4, 3.2, "TOP VIEW — set layout (fixed)", fontsize=12, weight="bold")
 plt.subplots_adjust(0, 0, 1, 1)
-plt.savefig("/home/claude/treg-ugc-assets/set_layout.png")
+plt.savefig("/home/claude/treg-ugc-assets/blocking/set_layout.png")

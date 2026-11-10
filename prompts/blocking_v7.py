@@ -107,5 +107,5 @@ beats = [
 fig.text(0.02, 0.015, "\n".join(beats), fontsize=8.6, va="bottom",
          bbox=dict(fc="white", ec="#999", boxstyle="round,pad=0.5"))
 plt.subplots_adjust(left=0.01, right=0.99, top=0.95, bottom=0.14)
-plt.savefig("/home/claude/treg-ugc-assets/blocking_v7.png")
+plt.savefig("/home/claude/treg-ugc-assets/blocking/paths_v7.png")
 print("ok")

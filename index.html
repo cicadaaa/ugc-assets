@@ -1,83 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>treg UGC — locked asset library</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UGC — reference assets v4.1</title>
 <style>
-  :root { --ink:#1b1b1b; --muted:#6b6b6b; --line:#e4e2de; --bg:#faf9f7; }
-  * { box-sizing:border-box; }
-  body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; color:var(--ink); background:var(--bg); }
-  header { padding:32px 28px 8px; max-width:1200px; margin:0 auto; }
-  h1 { font-size:22px; margin:0 0 6px; font-weight:600; letter-spacing:-0.01em; }
-  header p { margin:0; color:var(--muted); font-size:14px; line-height:1.5; }
-  main { max-width:1200px; margin:0 auto; padding:16px 28px 48px; }
-  section { margin-top:28px; }
-  h2 { font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); margin:0 0 12px; font-weight:600; }
-  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap:18px; }
-  figure { margin:0; background:#fff; border:1px solid var(--line); border-radius:10px; overflow:hidden; }
-  figure img { display:block; width:100%; height:auto; background:#eee; }
-  figcaption { padding:12px 14px 14px; font-size:13px; line-height:1.45; }
-  figcaption b { display:block; font-size:14px; margin-bottom:2px; }
-  figcaption code { font-size:12px; color:var(--muted); }
-  .plate { max-width:360px; }
-  table { border-collapse:collapse; font-size:13px; width:100%; background:#fff; border:1px solid var(--line); border-radius:10px; overflow:hidden; }
-  td, th { text-align:left; padding:8px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
-  th { color:var(--muted); font-weight:600; }
-</style>
-</head>
-<body>
-<header>
-  <h1>treg UGC — locked asset library</h1>
-  <p>Stage 2 assets locked Nov 9, 2026. Character sheets carry identity, hair, body and outfit only; light comes from the shot plan's locked blocks. Files are served from this artifact at the paths below (see <code>manifest.json</code>).</p>
-</header>
+ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Arial,sans-serif;color:#1b1b1b;background:#faf9f7}
+ header,main{max-width:1200px;margin:0 auto;padding:24px 28px}
+ h1{font-size:22px;margin:0 0 6px} header p{color:#6b6b6b;font-size:14px;margin:0}
+ h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:#6b6b6b;margin:28px 0 12px}
+ .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+ figure{margin:0;background:#fff;border:1px solid #e4e2de;border-radius:10px;overflow:hidden}
+ img{display:block;width:100%;height:auto} figcaption{padding:10px 14px;font-size:13px} figcaption b{display:block} code{color:#6b6b6b;font-size:12px}
+</style></head><body>
+<header><h1>UGC — reference assets v4.1</h1><p>Only these files exist. Every generation references them, in this order: 5 cast files, the plate, the beat's blocking diagram.</p></header>
 <main>
-  <section>
-    <h2>Prompt references (v4.1) — one file per person, pass in this order</h2>
-    <div class="grid">
-      <figure><img src="cast/leader.jpg" alt="LEADER"><figcaption><b>1 · LEADER</b>Face + outfit (outfit with head and hair removed). <code>cast/leader.jpg</code></figcaption></figure>
-      <figure><img src="cast/hero.jpg" alt="HERO"><figcaption><b>2 · HERO</b>Face + outfit (outfit with head and hair removed). <code>cast/hero.jpg</code></figcaption></figure>
-      <figure><img src="cast/feather.jpg" alt="FEATHER"><figcaption><b>3 · FEATHER</b>Face + outfit (outfit with head and hair removed). <code>cast/feather.jpg</code></figcaption></figure>
-      <figure><img src="cast/slicked.jpg" alt="SLICKED"><figcaption><b>4 · SLICKED</b>Face + outfit (outfit with head and hair removed). <code>cast/slicked.jpg</code></figcaption></figure>
-      <figure><img src="cast/silverman.jpg" alt="SILVERMAN"><figcaption><b>5 · SILVERMAN</b>Face + outfit (outfit with head and hair removed). <code>cast/silverman.jpg</code></figcaption></figure>
-      <figure><img src="plates/P-C2.jpg" alt="Plate P-C2"><figcaption><b>6 · Plate P-C2 (locked)</b>Empty set from camera mark C2. <code>plates/P-C2.jpg</code></figcaption></figure>
-      <figure><img src="blocking/shots/S2a.png" alt="S2a blocking"><figcaption><b>7 · Blocking diagram of the beat</b>e.g. <code>blocking/shots/S2a.png</code></figcaption></figure>
-    </div>
-  </section>
-  <section>
-    <h2>Blocking</h2>
-    <div class="grid">
-      <figure><img src="set_layout.png" alt="Set layout"><figcaption><b>Set layout (fixed)</b>Sofa on the crossing, perpendicular to the curb; desk 2 m along; laptop screen faces the sofa. <code>set_layout.png</code></figcaption></figure>
-      <figure><img src="blocking_v7.png" alt="Blocking v7"><figcaption><b>Paths and camera marks</b><code>blocking_v7.png</code></figcaption></figure>
-    </div>
-    <figure style="margin-top:18px"><img src="blocking/shots/_all_shots.jpg" alt="All beats"><figcaption><b>All nine beats</b>S1a sofa · S1b walk · S2a at the desk · S2b push-in · S3a HERO speaks · S3b camera to LEADER's left · S4 side-on · S5a over the shoulder · S5b screen. <code>blocking/shots/</code></figcaption></figure>
-  </section>
-  <section>
-    <h2>Character sheets (review only — never in a prompt)</h2>
-    <div class="grid">
-      <figure><img src="sheets/leader_bob_kimono.jpg" alt="Leader character sheet"><figcaption><b>Leader · Bob</b>Black blunt bob with fringe. Off-white pinstripe yukata, charcoal obi, white tabi, wooden zori.<br><code>sheets/leader_bob_kimono.jpg</code></figcaption></figure>
-      <figure><img src="sheets/hero.jpg" alt="Hero character sheet"><figcaption><b>Hero · Platinum blonde</b>Freckles. Black scoop tank, white pleated barrel trousers, black Mary Janes.<br><code>sheets/hero.jpg</code></figcaption></figure>
-      <figure><img src="sheets/bg_feather_model.jpg" alt="Feather model character sheet"><figcaption><b>BG · Feather model</b>Very slim Japanese runway model, long wavy black hair. Lilac ostrich-feather column dress, lilac flats.<br><code>sheets/bg_feather_model.jpg</code></figcaption></figure>
-      <figure><img src="sheets/bg_slicked.jpg" alt="Slicked-back character sheet"><figcaption><b>BG · Slicked back</b>White square-neck drop-waist midi, oatmeal knit tied over shoulders, black flats.<br><code>sheets/bg_slicked.jpg</code></figcaption></figure>
-      <figure><img src="sheets/bg_silver_man.jpg" alt="Silver-haired man character sheet"><figcaption><b>BG · Silver-haired model</b>Japanese male model, shoulder-length silver hair. White tee only, beige chinos, black belt, black slides.<br><code>sheets/bg_silver_man.jpg</code></figcaption></figure>
-    </div>
-  </section>
-  <section>
-    <h2>Set</h2>
-    <div class="grid">
-      <figure class="plate"><img src="plates/p1_master.png" alt="Street crosswalk master plate"><figcaption><b>Plate p1 · master geography</b>Wide down the street: angled oak desk on the sidewalk, bare bouclé sofa and travertine table on the zebra crossing.<br><code>plates/p1_master.png</code></figcaption></figure>
-    </div>
-  </section>
-  <section>
-    <h2>Still to add</h2>
-    <table>
-      <tr><th>Asset</th><th>Status</th></tr>
-      <tr><td>Plate pA (desk-side curb, looking across the crossing)</td><td>To generate from p1</td></tr>
-      <tr><td>Plate p3 re-roll (desk medium, matched to p1)</td><td>To generate from p1</td></tr>
-      <tr><td>Voice takes (leader, hero, "How??")</td><td>Made in another session; not in this library yet</td></tr>
-      <tr><td>Magazine prop still ("3X CHEAPER")</td><td>Blocked on real prices</td></tr>
-    </table>
-  </section>
-</main>
-</body>
-</html>
+  <h2>1–5 · Cast (one file per person: face + hairless, headless outfit)</h2>
+  <div class="grid">
+      <figure><img src="cast/leader.jpg" alt="LEADER"><figcaption><b>1 · LEADER</b><code>cast/leader.jpg</code></figcaption></figure>
+      <figure><img src="cast/hero.jpg" alt="HERO"><figcaption><b>2 · HERO</b><code>cast/hero.jpg</code></figcaption></figure>
+      <figure><img src="cast/feather.jpg" alt="FEATHER"><figcaption><b>3 · FEATHER</b><code>cast/feather.jpg</code></figcaption></figure>
+      <figure><img src="cast/slicked.jpg" alt="SLICKED"><figcaption><b>4 · SLICKED</b><code>cast/slicked.jpg</code></figcaption></figure>
+      <figure><img src="cast/silverman.jpg" alt="SILVERMAN"><figcaption><b>5 · SILVERMAN</b><code>cast/silverman.jpg</code></figcaption></figure>
+  </div>
+  <h2>6 · Plate</h2>
+  <div class="grid">
+      <figure><img src="plates/P-C2.jpg" alt="P-C2"><figcaption><b>P-C2 (locked)</b><code>plates/P-C2.jpg</code></figcaption></figure>
+  </div>
+  <h2>7 · Blocking diagrams (one per beat)</h2>
+  <div class="grid">
+      <figure><img src="blocking/shots/S1a.png" alt="S1a"><figcaption><b>S1a</b><code>blocking/shots/S1a.png</code></figcaption></figure>
+      <figure><img src="blocking/shots/S1b.png" alt="S1b"><figcaption><b>S1b</b><code>blocking/shots/S1b.png</code></figcaption></figure>
+      <figure><img src="blocking/shots/S2a.png" alt="S2a"><figcaption><b>S2a</b><code>blocking/shots/S2a.png</code></figcaption></figure>
+      <figure><img src="blocking/shots/S2b.png" alt="S2b"><figcaption><b>S2b</b><code>blocking/shots/S2b.png</code></figcaption></figure>
+      <figure><img src="blocking/shots/S3a.png" alt="S3a"><figcaption><b>S3a</b><code>blocking/shots/S3a.png</code></figcaption></figure>
+      <figure><img src="blocking/shots/S3b.png" alt="S3b"><figcaption><b>S3b</b><code>blocking/shots/S3b.png</code></figcaption></figure>
+      <figure><img src="blocking/shots/S4.png" alt="S4"><figcaption><b>S4</b><code>blocking/shots/S4.png</code></figcaption></figure>
+      <figure><img src="blocking/shots/S5a.png" alt="S5a"><figcaption><b>S5a</b><code>blocking/shots/S5a.png</code></figcaption></figure>
+      <figure><img src="blocking/shots/S5b.png" alt="S5b"><figcaption><b>S5b</b><code>blocking/shots/S5b.png</code></figcaption></figure>
+  </div>
+  <h2>Set and paths</h2>
+  <div class="grid">
+      <figure><img src="blocking/set_layout.png" alt="set layout"><figcaption><b>Set layout</b><code>blocking/set_layout.png</code></figcaption></figure>
+      <figure><img src="blocking/paths_v7.png" alt="paths"><figcaption><b>Paths and camera marks</b><code>blocking/paths_v7.png</code></figcaption></figure>
+  </div>
+  <h2>Edit-only artwork</h2>
+  <div class="grid">
+      <figure><img src="art/magazine_spread.png" alt="magazine spread"><figcaption><b>Magazine spread</b><code>art/magazine_spread.png</code></figcaption></figure>
+      <figure><img src="art/treg_logo.png" alt="treg logo"><figcaption><b>treg lock-up</b><code>art/treg_logo.png</code></figcaption></figure>
+  </div>
+</main></body></html>
