@@ -1,8 +1,16 @@
-# treg AIGC promo: hook shot plan v5.1, 0:00–0:13 (Nov 10, 2026)
+# treg AIGC promo: hook shot plan v5.2, 0:00–0:13 (Nov 10, 2026)
 
 **v5.0 is a clean rewrite.** Everything that was superseded (portrait 9:16 frame, furnished plates, per-camera plates, older prop crops, character sheets, earlier keyframes) is gone from this plan and from the repo. What is here is current.
 
-**v5.1 (same day): checked against the top-view blocking, camera moves enriched.** Every mark in section 6 was read back against `blocking/paths_v8.png` and `blocking/set_layout.png` (positions, facings, HERO on LEADER's right, laptop screen toward the sofa, camera path C1→C2→C2+→C3→C4). New section 4b: a camera-move vocabulary and one distinct move per beat, all handheld.
+**v5.2 (Nov 10, after keyframes v7): why people drifted off the marks, and the fix.**
+Root causes found in v7 (S1b, S2a, S3b, S5a, S5b):
+1. **The diagram's camera was too close.** C1/C2 sat 1.5 m from the curb, so in the diagram's camera view the two women filled the frame and the desk and sofa were cropped out. The model had no furniture in the diagram to anchor to, matched the people's *size* instead, and the only place that size fits in the wide empty plate is up on the sidewalk, close to the lens. Fix: C1/C2 moved to 2.6 m back; every diagram's camera view now shows the desk corner, the gap and the sofa edge together with the people.
+2. **"Beside the desk" and "between sofa and desk" had no measure.** The model stretched the gap to 4–5 m and put people in the middle of it. Fix: the gap is written as **1.7 m, one sofa length**, and the marks are stated as contact: *HERO's right hip almost touches the desk's near corner; LEADER one step to her left.*
+3. **Nothing said who may stand on the sidewalk.** Fix: *the camera man is the only person on the sidewalk; everyone else stands or sits on the zebra crossing below the curb.* The diagrams now draw an **L+H lane** (dashed red box, 1.7 m × 1.1 m, on the stripes between sofa and desk) and the people are only ever inside it.
+4. **"Crew around the sofa" let them stand behind it.** Fix: *FEATHER on the seat, SILVERMAN on the road-end armrest, SLICKED on the travertine table; nobody stands behind the sofa.* The crew zone in the diagrams is now the sofa's own footprint.
+5. **S5b had no street in frame**, so the model invented a room. Fix: the beat now keeps the stripes and road visible beyond the screen and says so.
+
+**v5.1: checked against the top-view blocking, camera moves enriched.** Every mark in section 6 was read back against `blocking/paths_v8.png` and `blocking/set_layout.png` (positions, facings, HERO on LEADER's right, laptop screen toward the sofa, camera path C1→C2→C2+→C3→C4). New section 4b: a camera-move vocabulary and one distinct move per beat, all handheld.
 
 **What changed in v5.0**
 - **Frame is 16:9 landscape** (X's wide video format). The X100VI is held horizontally.
@@ -37,9 +45,10 @@ Base: `https://raw.githubusercontent.com/cicadaaa/ugc-assets/main/`
 - **Location** (`plates/scene_empty.jpg`): a granite sidewalk along an old carved-stone building with warm-lit shop windows; from the curb a wide zebra crossing runs straight out across the road, perpendicular to the sidewalk, stripes parallel to the curb.
 - **Sofa:** on the zebra crossing, perpendicular to the curb, one end touching it, seat facing the desk. Travertine table at its road end.
 - **Desk:** on the crossing about 2 m along the curb, at 30°, near end touching the curb. Laptop on the near end, **screen facing the sofa**, lid blank. Dome lamp on the far end; tan chair behind.
+- **The L+H lane.** LEADER and HERO only ever stand or walk inside the 1.7 m gap between the sofa's curb end and the desk's near corner, on the white stripes, one step below the curb. They never step up onto the sidewalk and never pass the desk. At the desk their marks are contact marks: HERO's right hip almost touches the desk's near corner; LEADER is one step to HERO's left.
 - **HERO is always on LEADER's right.**
-- **Crew:** FEATHER, SILVERMAN and SLICKED stay within a ring around the sofa, hopping around it.
-- **Camera man:** on the sidewalk or the curb edge, except in S5 where he steps onto the crossing behind LEADER.
+- **Crew:** FEATHER kneels/bounces on the sofa seat, SILVERMAN sits on the road-end armrest and hops on and off it, SLICKED sits on the travertine table facing the sofa. They stay ON the furniture; nobody stands behind the sofa or wanders onto the crossing.
+- **Camera man:** the ONLY person on the sidewalk. C1 and C2 are 2.6 m back from the curb (so the frame holds sofa, gap and desk together), C2+ and C3 at the curb edge, C4 on the crossing behind LEADER.
 
 | File | What |
 |---|---|
@@ -162,7 +171,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 ### S1a · Sofa, camera arrives · 0:00–0:00.8
 - **Diagram (image 9):** `blocking/shots/S1a.png`
 - **Camera:** C1 — wide, sidewalk, 2.6 m from the sofa. 16:9 landscape.
-- **Beat:** LEADER sits at the curb end of the sofa; HERO right beside her on her right (road side), magazine closed on her lap. FEATHER bounces on the far seat; SILVERMAN hops on and off the road-end armrest; SLICKED stands behind the sofa back on tiptoe. LEADER glances up at the lens. The desk is two metres along the curb at the right of frame.
+- **Beat:** LEADER sits at the curb end of the sofa; HERO right beside her on her right (road side), magazine closed on her lap. FEATHER bounces on the far seat; SILVERMAN sits on the road-end armrest and hops on it; SLICKED sits on the travertine table facing the sofa. Nobody stands behind the sofa. LEADER glances up at the lens. The desk is 1.7 m along the curb at the right of frame, in the same shot as the sofa.
 - **Handheld:** Camera man arriving: last two steps, a small bob, settles; frame drifts a degree and corrects.
 - **Move:** arrive-and-settle. He walks the last two steps toward the sofa, the frame bobs twice, overshoots slightly past LEADER and settles on the group. Rack: the frame is on the whole group; focus sits on LEADER.
 - **Asset lock (paste into this beat's prompt):** ASSET LOCK: the location is image 6 and it never changes. The sofa and table look exactly like image 7, the desk, laptop, lamp and chair look exactly like image 8, and every one of them stands exactly where image 9 puts it. Do not move, add, restyle or reinvent any furniture, building, curb or stripe. Every person's face and outfit come only from images 1-5.
@@ -170,7 +179,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 ### S1b · They stand and walk; camera backs up · 0:00.8–0:02
 - **Diagram (image 9):** `blocking/shots/S1b.png`
 - **Camera:** C1→C2 — walking backward along the sidewalk. 16:9 landscape.
-- **Beat:** LEADER and HERO are up and walking along the curb toward the desk and the lens, HERO glued to LEADER's right, magazine open over her face. Crew stays at the sofa 1–2 m behind, soft. LEADER's eyes on the lens.
+- **Beat:** LEADER and HERO are up and walking along the curb toward the desk, HERO glued to LEADER's right, magazine open over her face. They are inside the 1.7 m lane between sofa and desk, on the white stripes, one step below the curb, never on the sidewalk; the sofa is one step behind them and the desk one step ahead, both in frame. LEADER's eyes on the lens.
 - **Handheld:** Short uneven backward steps, a soft bob on each, slight sway, horizon tilts ~2° and is corrected; one glance over his shoulder (small jolt) before the desk.
 - **Move:** tilt-up on the rise, then walking backward. As LEADER stands the camera tilts up a beat late, her head clips the top edge and he corrects; then he backs up along the sidewalk, short uneven steps, soft bob, 1–3° tilt corrected each step; one step dips to waist height and comes back up; one glance-back jolt before the desk.
 - **Asset lock (paste into this beat's prompt):** ASSET LOCK: the location is image 6 and it never changes. The sofa and table look exactly like image 7, the desk, laptop, lamp and chair look exactly like image 8, and every one of them stands exactly where image 9 puts it. Do not move, add, restyle or reinvent any furniture, building, curb or stripe. Every person's face and outfit come only from images 1-5.
@@ -178,7 +187,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 ### S2a · At the desk; LEADER starts her line · 0:02–0:03
 - **Diagram (image 9):** `blocking/shots/S2a.png`
 - **Camera:** C2 — medium two-shot, 1.7 m back from the curb. 16:9 landscape.
-- **Beat:** They stop beside the desk's near (laptop) end. LEADER faces the lens and starts: "Still paying Higgsfield for this?" HERO at her right, between her and the desk, magazine at her chest, looking at LEADER. Crew soft behind at the sofa.
+- **Beat:** They stop at the desk's near (laptop) end: HERO's right hip almost touches the desk corner, LEADER one step to her left; both on the stripes below the curb, the sofa one sofa-length behind them in frame. LEADER faces the lens and starts: "Still paying Higgsfield for this?" HERO, magazine at her chest, looks at LEADER. Crew soft on the sofa behind.
 - **Handheld:** Standing: breath sway, small framing corrections.
 - **Move:** stop and rack focus. He stops at C2 with a small settle; focus is briefly on HERO's magazine and racks to LEADER's eyes as she opens her mouth.
 - **Asset lock (paste into this beat's prompt):** ASSET LOCK: the location is image 6 and it never changes. The sofa and table look exactly like image 7, the desk, laptop, lamp and chair look exactly like image 8, and every one of them stands exactly where image 9 puts it. Do not move, add, restyle or reinvent any furniture, building, curb or stripe. Every person's face and outfit come only from images 1-5.
@@ -202,7 +211,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 ### S3b · Camera walks round to LEADER's left · 0:07–0:10
 - **Diagram (image 9):** `blocking/shots/S3b.png`
 - **Camera:** C2→C3 — arriving on LEADER's left, 1 m. 16:9 landscape.
-- **Beat:** Still HERO's price line. The camera man walks along the curb to LEADER's LEFT (sofa side). Foreground: LEADER's left shoulder, sleeve and the back of her bob, soft. HERO talking beyond her; the desk and laptop behind HERO.
+- **Beat:** Still HERO's price line; nobody has moved: HERO still at the desk corner, LEADER one step to her left, both on the stripes. The camera man walks along the curb edge to LEADER's LEFT (sofa side), 1 m from her. Foreground: LEADER's left shoulder, sleeve and the back of her bob, soft. HERO talking beyond her, the desk and laptop right behind HERO.
 - **Handheld:** Each step a visible dip; the horizon rolls 2–3° and levels as he stops.
 - **Move:** arc. Still on HERO's line he walks a quarter circle along the curb to LEADER's left; each step a dip, the sofa and building sweep across the background, the horizon rolls 2–3° and levels as he stops; LEADER's shoulder grows into the left foreground.
 - **Asset lock (paste into this beat's prompt):** ASSET LOCK: the location is image 6 and it never changes. The sofa and table look exactly like image 7, the desk, laptop, lamp and chair look exactly like image 8, and every one of them stands exactly where image 9 puts it. Do not move, add, restyle or reinvent any furniture, building, curb or stripe. Every person's face and outfit come only from images 1-5.
@@ -218,7 +227,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 ### S5a · BEHIND LEADER: over her left shoulder onto the laptop · 0:11.5–0:12.5
 - **Diagram (image 9):** `blocking/shots/S5a.png`
 - **Camera:** C4 — behind her, lens at her shoulder height. 16:9 landscape.
-- **Beat:** LEADER steps to the laptop on the desk's near end and stands facing its screen. **The screen faces the sofa, so she stands on the sofa side of the desk with her BACK to the camera.** The camera man steps in BEHIND her, slightly to her left. **Her face is NOT visible.** What the camera sees: the back of her black bob and the edge of her left ear, her left shoulder and the pinstripe kimono sleeve, large and soft at the right edge of the frame; past her shoulder, the open laptop on the desk with its plain glowing screen, sharp in the middle of the frame. HERO on LEADER's right, seen from behind three-quarter, leaning toward the screen. The laptop never moves.
+- **Beat:** LEADER takes half a step to the laptop and stands at the desk's near edge facing the screen, close enough to touch the keyboard. **The screen faces the sofa, so she stands on the sofa side of the desk with her BACK to the camera.** The sofa is 1.7 m behind her, at the left edge of frame. The camera man steps in BEHIND her, slightly to her left. **Her face is NOT visible.** What the camera sees: the back of her black bob and the edge of her left ear, her left shoulder and the pinstripe kimono sleeve, large and soft at the right edge of the frame; past her shoulder, the open laptop on the desk with its plain glowing screen, sharp in the middle of the frame. HERO on LEADER's right, seen from behind three-quarter, leaning toward the screen. The laptop never moves.
 - **Handheld:** A step and a half in behind her: a dip, a slight roll; focus racks from her shoulder to the screen.
 - **Move:** step-in behind + rack focus. A step and a half round behind her onto the crossing: a dip, a slight roll; the back of her bob enters frame large on the right; focus racks from her shoulder to the screen.
 - **Asset lock (paste into this beat's prompt):** ASSET LOCK: the location is image 6 and it never changes. The sofa and table look exactly like image 7, the desk, laptop, lamp and chair look exactly like image 8, and every one of them stands exactly where image 9 puts it. Do not move, add, restyle or reinvent any furniture, building, curb or stripe. Every person's face and outfit come only from images 1-5.
@@ -226,7 +235,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 ### S5b · Push past her shoulder into the screen · 0:12.5–0:13
 - **Diagram (image 9):** `blocking/shots/S5b.png`
 - **Camera:** C4+ — screen fills the frame. 16:9 landscape.
-- **Beat:** From behind her, the camera pushes forward past her left shoulder until the plain glowing screen fills most of the frame. The back of her bob and her shoulder slide out of frame on the right, soft. **Still no face.** No UI, no logo. Hand-off frame for the match cut to the screen recording.
+- **Beat:** From behind her, the camera pushes forward past her left shoulder until the plain glowing screen fills most of the frame. The back of her bob and her shoulder slide out of frame on the right, soft. **Still no face.** Beyond and around the screen, out of focus: the oak desk top, the white stripes and the grey road of the same street; this is still outdoors on the crossing. No UI, no logo. Hand-off frame for the match cut to the screen recording.
 - **Handheld:** A slow handheld push with a little wobble; a one-degree tilt.
 - **Move:** slow push past. He pushes forward past her left shoulder; her bob and shoulder slide out on the right; the screen fills the frame; a little wobble, a 1° tilt; the last frame is the hand-off.
 - **Asset lock (paste into this beat's prompt):** ASSET LOCK: the location is image 6 and it never changes. The sofa and table look exactly like image 7, the desk, laptop, lamp and chair look exactly like image 8, and every one of them stands exactly where image 9 puts it. Do not move, add, restyle or reinvent any furniture, building, curb or stripe. Every person's face and outfit come only from images 1-5.
@@ -264,7 +273,7 @@ Both are rendered in code with the real fonts, so the type is exact and cannot b
 - **Outfits:** exactly one kimono (LEADER), one blonde (HERO), one magazine (HERO).
 - **Location:** same building, sidewalk, curb and crossing as `plates/scene_empty.jpg`; the frame is 16:9 landscape.
 - **Furniture look:** the sofa, table, desk, laptop, lamp and chair look like `props/`.
-- **Positions:** every person and every piece of furniture is where the beat's diagram puts it. HERO is on LEADER's right. The laptop screen faces the sofa.
+- **Positions:** every person and every piece of furniture is where the beat's diagram puts it. LEADER and HERO are inside the lane (on the stripes, between sofa and desk, below the curb), never on the sidewalk; at the desk HERO touches the desk corner. Sofa-to-desk gap reads as one sofa length. Crew is ON the sofa/armrest/table. HERO is on LEADER's right. The laptop screen faces the sofa.
 - **S5a/S5b:** LEADER seen from behind only (bob, ear edge, shoulder). No face.
 - **Light:** soft overcast, neutral faces, no sun.
 
