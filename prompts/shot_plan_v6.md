@@ -1,6 +1,8 @@
-# treg AIGC promo: hook shot plan v6, 0:00–0:11.5 (Nov 10, 2026)
+# treg AIGC promo: hook shot plan v6.1, 0:00–0:11.3 (Nov 10, 2026)
 
-**v6: the hook is cut to the lines.** Every second has someone talking, except two silent moments of 0.5 s at most: the open (S1) and the push into the screen (S5). Gaps between lines are 0.2 s at most. The walk from the sofa to the desk is gone: S1 cuts straight to the pair already at the desk (S2). The hook is now 11.5 s instead of 13 s.
+**v6: the hook is cut to the lines.** Every second has someone talking, except the silent open (S1, 0.5 s) and the push into the screen at the end of S4 (0.3 s at most). Gaps between lines are 0.2 s at most. The walk from the sofa to the desk is gone: S1 cuts straight to the pair already at the desk (S2). The hook is now about 11.3 s instead of 13 s.
+
+**v6.1:** S4 and S5 are merged into one shot (LEADER's last line runs straight into the push to the screen). Prices are in: the video costs $9.45 on Higgsfield and $1.80 on treg. LEADER's last line: "Told you, it's pay per call." All lines are recorded; the timeline uses their real lengths.
 
 **Rules for timing**
 - No stretch without a line runs longer than **0.5 s**.
@@ -10,16 +12,17 @@
 
 ## 0. Timeline
 
-| Beat | Time | Length | Who speaks | Line | Audio file |
+| Beat | Time | Length | Who speaks | Line | Audio file (trimmed length) |
 |---|---|---|---|---|---|
 | S1 | 0:00.0–0:00.5 | 0.5 s | nobody | (silent open: sofa, they rise) | — |
-| S2 | 0:00.5–0:02.7 | 2.2 s | LEADER | "Still paying Higgsfield for this?" | `audio/vo_leader_still-paying.mp3` (2.1 s) |
-| S3a | 0:02.7–0:05.0 | 2.3 s | HERO | "We made Higgsfield three x cheaper." | `audio/vo_hero_3x-cheaper.mp3` (2.2 s) |
-| S3b | 0:05.0–0:09.5 | 4.5 s | HERO | "I cost [$HF] on Higgsfield… and now [$TREG] on treg." | `audio/vo_hero_price.mp3` (to record) |
-| S4 | 0:09.5–0:11.0 | 1.5 s | LEADER | **TBD** | `audio/vo_leader_s4.mp3` (to record) |
-| S5 | 0:11.0–0:11.5 | 0.5 s | nobody | (silent push into the screen; hand-off to the screen recording) | — |
+| S2 | 0:00.5–0:02.4 | 1.9 s | LEADER | "Still paying Higgsfield for this?" | `audio/vo_leader_still-paying.mp3` (1.70 s) |
+| S3a | 0:02.4–0:04.8 | 2.4 s | HERO | "We made Higgsfield three x cheaper." | `audio/vo_hero_3x-cheaper.mp3` (2.27 s) · alt `vo_hero_5x-cheaper.mp3` (2.69 s) |
+| S3b | 0:04.8–0:09.8 | 5.0 s | HERO | "I cost nine forty-five on Higgsfield… and now a dollar eighty on treg." | `audio/vo_hero_price.mp3` (4.81 s) |
+| S4 | 0:09.8–0:11.3 | 1.5 s + push | LEADER | "Told you, it's pay per call." then the push into the screen | `audio/vo_leader_told-you_a.mp3` (1.65 s) · alt `_b` with a full stop (2.35 s) |
 
-The camera man's "How??" (`vo_camera_how.mp3`, 0.8 s) is not in the hook. If it comes back, it goes straight after S3a's line with no gap, and everything after it moves 0.8 s later.
+S4's push into the screen overlaps the end of the line; at most 0.3 s after her last word. Total ≈ 11.3 s (11.7 s with the "five x" take).
+
+**Claim check:** $9.45 ÷ $1.80 = 5.25×. "Three x cheaper" undersells it; "five x cheaper" matches the prices. Pick one before the S3a video.
 
 ## 1. References — exactly these 9 images, in this order, in every keyframe call
 
@@ -39,7 +42,7 @@ Base: `https://raw.githubusercontent.com/cicadaaa/ugc-assets/main/`
 
 **Rules**
 - Never pass anything else: no keyframe, no older plate, no generated street.
-- S5 has no previz (the camera is behind LEADER): it uses images 1, 2, `plates/scene_empty.jpg` and `props/desk_set.jpg`, with the stone building behind as the background.
+- The behind-LEADER frames (`S5a.jpg`, `S5b.jpg`, now the middle and last frame of S4) have no previz: they use images 1, 2, `plates/scene_empty.jpg` and `props/desk_set.jpg`, with the stone building behind as the background.
 - The prompt states the **left-to-right order in the frame** in words (for example "HERO on the LEFT, LEADER on the RIGHT"). Without it the model swapped the pair in 4 of 7 frames.
 - **Video calls** (Seedance) take only the approved keyframe as `first_frame` plus the line's audio. The video prompt describes people by their anchors (bob + kimono, platinum + tank).
 - **Order of work:** keyframe → Gate 1 → audio → 480p draft → Gate 2 → 720p final. A still that fails is re-rolled, never fixed in video.
@@ -49,8 +52,8 @@ Base: `https://raw.githubusercontent.com/cicadaaa/ugc-assets/main/`
 - **Location** (`plates/scene_empty.jpg`): a granite sidewalk along an old carved-stone building with fluted columns and warm-lit shop windows; a wide zebra crossing runs out from the curb, stripes parallel to the curb.
 - **Sofa:** on the crossing at the far curb, by the building (left-centre of the frame from the main camera). Travertine table at its road end.
 - **Desk:** on the crossing nearer the camera, centre-right of the frame, just right of the sofa. Laptop on the end nearest the sofa; dome lamp on the far end; tan chair, empty, at the near side.
-- **The laptop's screen ALWAYS faces the sofa.** On the desk the camera sees only the blank silver lid. In S5 LEADER, her back to the sofa, lifts it and holds it at chest height: the screen faces her (still the sofa direction), the lid faces away.
-- **HERO is always on LEADER's right.** Facing the main camera that puts HERO on the LEFT of the frame, LEADER on the RIGHT, LEADER nearer the desk. In S5, seen from behind, HERO is on the LEFT of the frame.
+- **The laptop's screen ALWAYS faces the sofa.** On the desk the camera sees only the blank silver lid. At the end of S4 LEADER, her back to the sofa, lifts it and holds it at chest height: the screen faces her (still the sofa direction), the lid faces away.
+- **HERO is always on LEADER's right.** Facing the main camera that puts HERO on the LEFT of the frame, LEADER on the RIGHT, LEADER nearer the desk. Seen from behind (end of S4), HERO is on the LEFT of the frame.
 - **Crew:** FEATHER on the sofa seat, SILVERMAN on the armrest, SLICKED on or by the travertine table. They stay on the furniture; nobody stands behind the sofa or at the desk.
 - **Camera man:** the only person on the sidewalk side; never seen.
 - Top view and marks: `prompts/shotdiagrams.py` and `prompts/previz.py` (calibrated camera on `scene_empty.jpg`) render `blocking/previz/<beat>.jpg`.
@@ -130,8 +133,7 @@ The camera follows whoever is speaking. While the woman with the black bob speak
 | **Rack + push-in** | focus racks from HERO's magazine to LEADER's eyes as she opens her mouth, then 2–3 small forward steps, a dip on each, waist-up to close-up | S2 |
 | **Whip pan** | fast hand pan from LEADER to HERO, overshoots a touch and snaps back, a frame of motion blur, focus hunts then locks | S3a |
 | **Arc** | a quarter circle along the curb to LEADER's left while HERO keeps talking; each step a dip, background sweeps, horizon rolls 2–3° and levels | S3b |
-| **Hold with breath** | standing close, breathing and micro-corrections; a small reframe as LEADER turns her head | S4 |
-| **Fast push past** | from behind LEADER, a quick push past her left shoulder until the screen fills the frame; a little wobble, 1° tilt | S5 |
+| **Hold, then swing behind and push past** | hold on LEADER's face for "Told you", then swing round behind her left shoulder and push past it until the screen fills the frame; a little wobble, 1° tilt | S4 |
 
 ## 5. Cast: constant motion signatures
 These hold in every shot; the per-shot tables in section 6 add what each person does in that moment.
@@ -182,30 +184,25 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 - **Line:** HERO: "I cost [$HF] on Higgsfield… and now [$TREG] on treg." Magazine open in her hands; eyes slide to LEADER on "treg". LEADER watches her, proud.
 - **Move:** arc to LEADER's left, ending with LEADER's shoulder in the left foreground.
 
-### S4 · LEADER turns her head and speaks · 0:09.5–0:11.0 · LEADER speaks
-- **Keyframe:** `keyframes/v10/S4.jpg`
-- **Frame order:** HERO (left-centre, soft), LEADER (right-centre, sharp); sofa crew soft at the far left; desk and chair empty, blank lid toward the camera.
-- **Line:** LEADER turns her head over her LEFT shoulder to the lens, three-quarter face, sly proud half-smile: **line TBD (1.5 s)**.
-- **Move:** hold with breath; small reframe as she turns.
+### S4 · LEADER's last line, straight into the screen · 0:09.8–0:11.3 · LEADER speaks
+- **First frame:** `keyframes/v10/S4.jpg` · **last frame:** `keyframes/v10/S5b.jpg` (Seedance first + last frame). `S5a.jpg` is the guide for the middle of the move.
+- **Start:** HERO left-centre, soft; LEADER right-centre, sharp, head turned over her LEFT shoulder to the lens, sly proud half-smile; desk with the blank lid; crew soft on the sofa.
+- **Line:** LEADER: "Told you, it's pay per call." She starts on the first frame.
+- **Action:** on "pay per call" she turns back to the desk and lifts the open laptop with both hands to chest height; the screen faces her (the sofa direction), the lid away.
+- **Move:** one continuous handheld move: hold on her face for "Told you", then on "pay per call" the camera swings round behind her left shoulder (back of her bob, obi bow centred, NO face from here on) and pushes past it until the plain glowing screen fills the frame. A little wobble, 1° tilt. Ends on the hand-off frame (S5b) at most 0.3 s after her last word.
+- **Hand-off:** the last frame is the match cut to the screen recording.
 
-### S5 · Push into the screen · 0:11.0–0:11.5 · silent
-- **Keyframes:** first frame `keyframes/v10/S5a.jpg`; ends on `S5b.jpg`.
-- **Frame:** from behind LEADER: back of her bob, the yukata, the obi bow centred as in her back photo, NO face. She holds the open laptop at chest height, screen toward her and the camera, glowing with a plain unreadable interface. HERO on the LEFT of the frame, from behind. The stone building of `scene_empty.jpg` behind, soft.
-- **Move:** fast push past her left shoulder until the screen fills the frame. Generated as a normal-speed push and sped up in the edit to 0.5 s.
-- **Hand-off:** last frame is the match cut to the screen recording.
+## 6b. Video routing (Seedance 2.5 via reAPI: `audio_urls` + `image_with_roles` first/last frame; 480p $0.12/s, min 4 s)
 
-## 6b. Video routing
-
-| Clip | Beat | First frame | Generate | Use in edit | Audio |
+| Clip | Beat | Frames | Generate | Use in edit | Audio |
 |---|---|---|---|---|---|
-| 1 | S1 | S1a | minimum length | first 0.5 s | none |
-| 2 | S2 | S2a | 4 s | 2.2 s | `vo_leader_still-paying.mp3` |
-| 3 | S3a | S3a | 4 s | 2.3 s | `vo_hero_3x-cheaper.mp3` |
-| 4 | S3b | S3b | 5 s | 4.5 s | `vo_hero_price.mp3` |
-| 5 | S4 | S4 | 4 s | 1.5 s | `vo_leader_s4.mp3` |
-| 6 | S5 | S5a | minimum length | whole push, sped up to 0.5 s | none |
+| 1 | S1 | first S1a | 4 s | first 0.5 s | none |
+| 2 | S2 | first S2a | 4 s | 1.9 s | `vo_leader_still-paying.mp3` |
+| 3 | S3a | first S3a | 4 s | 2.4 s | `vo_hero_3x-cheaper.mp3` (or 5x) |
+| 4 | S3b | first S3b | 5 s | 5.0 s | `vo_hero_price.mp3` |
+| 5 | S4 | first S4, last S5b | 4 s | 1.5–1.9 s (sped up if the push runs long) | `vo_leader_told-you_a.mp3` |
 
-Each spoken clip gets its line as audio input so the lips sync; the line starts on the clip's first frame. The final mix uses the clean voice files, not the clip's own audio.
+Each spoken clip gets its line as audio input so the lips sync; the line starts on the clip's first frame. The final mix uses the clean voice files.
 
 ## 7. Props and artwork
 
@@ -230,8 +227,8 @@ Both are rendered in code with the real fonts, so the type is exact and cannot b
 - **Outfits:** exactly one kimono (LEADER, obi bow as in her back photo), one blonde (HERO), one magazine (HERO).
 - **Location:** the same building, sidewalk, curb and crossing as `plates/scene_empty.jpg`; 16:9 landscape.
 - **Positions:** the left-to-right order matches the beat; HERO on LEADER's right (frame-left facing camera, frame-left from behind); crew on the sofa/armrest/table; nobody at the desk.
-- **Laptop:** screen toward the sofa; the camera sees only the blank lid, except over LEADER's shoulder in S5.
-- **S5:** no face.
+- **Laptop:** screen toward the sofa; the camera sees only the blank lid, except over LEADER's shoulder at the end of S4.
+- **End of S4 (S5a, S5b):** no face.
 
 ## 9. Gate 2 — 480p drafts
 - Identity holds through the clip; no face or outfit swaps.
@@ -242,10 +239,9 @@ Both are rendered in code with the real fonts, so the type is exact and cannot b
 
 ## 10. Cost
 - Keyframes: 9 × $0.03 per full pass.
-- Video at 480p, 3 tries per clip: about $8. Finals at 720p: about $6.
+- Video at 480p: 21 s per full pass × $0.12 ≈ $2.50; 3 tries ≈ $7.50. Finals at 720p ≈ $5.60.
 - Voice lines: under $0.01 each.
 
 ## 11. Still open
-- LEADER's S4 line (1.5 s).
-- [$HF] / [$TREG] for HERO's price line in S3b.
-- Record `vo_hero_price.mp3` and `vo_leader_s4.mp3`; re-export the three existing takes into `audio/` in the repo.
+- "Three x" or "five x" cheaper (the prices make it 5.25×).
+- Listen to and approve the five takes in `audio/`.
