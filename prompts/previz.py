@@ -8,6 +8,7 @@ import shotdiagrams as sd
 
 PLATE = '/home/claude/treg-ugc-assets/plates/scene_empty.jpg'
 FONT = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 34)
+FONT_S = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 22)
 
 def mk(cx, cy, cz, yawdeg, pitch):
     y = math.radians(yawdeg)
@@ -75,9 +76,10 @@ def draw_person(draw, cam, p, W, H):
     # nose marker to show facing
     npt = px(cam, x + fx*0.14, y + fy*0.14, head_z0 + 0.1, W, H)
     if npt: draw.ellipse([npt[0]-6, npt[1]-6, npt[0]+6, npt[1]+6], fill=(255, 60, 60))
-    top = px(cam, x, y, head_z0 + 0.3, W, H)
-    if top:
-        draw.text((top[0], top[1] - 40), k, fill='white', font=FONT, anchor='ms', stroke_width=3, stroke_fill='black')
+    mid = px(cam, x, y, head_z0 - 0.35, W, H)
+    if mid:
+        name = {'L': 'LEADER', 'H': 'HERO', 'FE': 'FEATHER', 'SM': 'SILVER', 'SL': 'SLICKED'}[k]
+        draw.text(mid, name, fill='white', font=FONT_S, anchor='mm', stroke_width=3, stroke_fill='black')
 
 def render(people, cam=None, out=None, label=''):
     cam = cam or PLATE_CAM
