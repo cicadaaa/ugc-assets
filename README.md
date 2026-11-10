@@ -34,17 +34,17 @@ The sheets carry identity, hair, body and outfit only. Lighting for every shot c
 - The plans and prompts are in the claude.ai Project "aigc" (`treg-ugc-*.md`).
 
 ## Prompt references (v4.0, Nov 10) — use these, never the sheets, never an old keyframe
-Fixed order for every still call (12 images; reAPI allows 14). Each person = a FACE board (faces only, same person 3–4 times, age labelled) + an OUTFIT photo with the head cropped off, so the model can only take the face from the face board.
+Fixed order for every still call (12 images; reAPI allows 14). Each person = ONE face photo (front view only, one face per file, nothing else in the frame) + ONE outfit photo with the head cropped off, so the model can only take the face from the face file and never sees two faces in one image. The multi-view boards live in `cast/boards/` for human review only.
 
 | # | File | Role | What it is |
 |---|---|---|---|
-| 1 | `cast/leader_face.jpg` | LEADER face | 3 sheet face views + the approved in-scene face, labelled "same young woman, about 25" |
+| 1 | `cast/leader_face.jpg` | LEADER face | one face, front view |
 | 2 | `cast/leader_body.jpg` | LEADER outfit | front + back, head cropped |
-| 3 | `cast/hero_face.jpg` | HERO face | 3 sheet face views + the approved in-scene face |
+| 3 | `cast/hero_face.jpg` | HERO face | one face, front view |
 | 4 | `cast/hero_body.jpg` | HERO outfit | front + back, head cropped |
-| 5–6 | `cast/feather_face.jpg`, `cast/feather_body.jpg` | FEATHER | face board / headless outfit |
-| 7–8 | `cast/slicked_face.jpg`, `cast/slicked_body.jpg` | SLICKED | face board / headless outfit |
-| 9–10 | `cast/silverman_face.jpg`, `cast/silverman_body.jpg` | SILVERMAN | face board / headless outfit |
+| 5–6 | `cast/feather_face.jpg`, `cast/feather_body.jpg` | FEATHER | one face, front / headless outfit |
+| 7–8 | `cast/slicked_face.jpg`, `cast/slicked_body.jpg` | SLICKED | one face, front / headless outfit |
+| 9–10 | `cast/silverman_face.jpg`, `cast/silverman_body.jpg` | SILVERMAN | one face, front / headless outfit |
 | 11 | `plates/P-C2.jpg` (or the beat's camera mark) | empty set | building, crossing, sofa, desk, laptop from that camera — fixes the furniture |
 | 12 | `blocking/shots/<beat>.png` | blocking diagram | top view + projected camera view with every person and prop as a labelled shape |
 
