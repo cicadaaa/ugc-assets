@@ -170,7 +170,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 
 ### S1a · Sofa, camera arrives · 0:00–0:00.8
 - **Diagram (image 9):** `blocking/shots/S1a.png`
-- **Camera:** C1 — wide, sidewalk, 2.6 m from the sofa. 16:9 landscape.
+- **Camera:** C1 — wide, on the sidewalk 2.6 m back from the curb, sofa and desk both in frame. 16:9 landscape.
 - **Beat:** LEADER sits at the curb end of the sofa; HERO right beside her on her right (road side), magazine closed on her lap. FEATHER bounces on the far seat; SILVERMAN sits on the road-end armrest and hops on it; SLICKED sits on the travertine table facing the sofa. Nobody stands behind the sofa. LEADER glances up at the lens. The desk is 1.7 m along the curb at the right of frame, in the same shot as the sofa.
 - **Handheld:** Camera man arriving: last two steps, a small bob, settles; frame drifts a degree and corrects.
 - **Move:** arrive-and-settle. He walks the last two steps toward the sofa, the frame bobs twice, overshoots slightly past LEADER and settles on the group. Rack: the frame is on the whole group; focus sits on LEADER.
@@ -186,7 +186,7 @@ These hold in every shot; the per-shot tables in section 6 add what each person 
 
 ### S2a · At the desk; LEADER starts her line · 0:02–0:03
 - **Diagram (image 9):** `blocking/shots/S2a.png`
-- **Camera:** C2 — medium two-shot, 1.7 m back from the curb. 16:9 landscape.
+- **Camera:** C2 — medium two-shot, on the sidewalk 2.6 m back from the curb, sofa edge and desk corner both in frame. 16:9 landscape.
 - **Beat:** They stop at the desk's near (laptop) end: HERO's right hip almost touches the desk corner, LEADER one step to her left; both on the stripes below the curb, the sofa one sofa-length behind them in frame. LEADER faces the lens and starts: "Still paying Higgsfield for this?" HERO, magazine at her chest, looks at LEADER. Crew soft on the sofa behind.
 - **Handheld:** Standing: breath sway, small framing corrections.
 - **Move:** stop and rack focus. He stops at C2 with a small settle; focus is briefly on HERO's magazine and racks to LEADER's eyes as she opens her mouth.
