@@ -249,7 +249,7 @@ SHOTS = [
   "S2a 0:02  They stop at the desk's near end: HERO's right hip almost touches the desk corner, LEADER one step to her left. Both stand on the stripes below the curb; the camera man is the only one on the sidewalk. "
   "magazine lowered to her chest, looking at LEADER. Camera C2 on the sidewalk, 2.6 m back from the curb. LEADER: 'Still paying Higgsfield for this?' Crew soft 2 m behind.",
   [P("L", 2.85, -0.45, "stand", 90, "faces lens, speaking"), P("H", 3.2, -0.3, "stand", 120, "at the desk corner, looks at L"),
-   FE_home, P("SM", 1.95, -2.75, "stand", 60), SL_home],
+   FE_home, SM_home, SL_home],
   CAM(4.1, 2.6, (2.95, -0.45), z=1.5, pitch=-4, note="C2 · medium two-shot")),
  ("S2b", "Push-in on LEADER",
   "S2b 0:03  While LEADER speaks the camera walks in to 0.8 m: her face and upper body fill the frame, focus on her eyes, proud cute micro-expressions. "
